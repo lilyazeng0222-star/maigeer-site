@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Block template/utility pages from indexing
+Allow: /product_detail.html?id=
+Disallow: /product_detail.html$
+Disallow: /googlef3bde1584bdcb69b.html
+
+# Sitemap location
+Sitemap: https://www.maigeermachinery.com/sitemap.xml
