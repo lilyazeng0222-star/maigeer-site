@@ -545,6 +545,33 @@ function setLang(lang){applyLang(lang);}
 function selectLang(lang,label){applyLang(lang);}
 document.addEventListener('DOMContentLoaded',function(){ rememberTextNodes(); applyLang('en'); });
 </script>
+
+<script>
+// ── 内容保护 ──
+document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+document.addEventListener('keydown', function(e){
+  if((e.ctrlKey||e.metaKey) && (e.key==='c'||e.key==='u'||e.key==='s'||e.key==='a')){
+    e.preventDefault();
+  }
+  if(e.key==='F12'){ e.preventDefault(); }
+});
+document.addEventListener('selectstart', function(e){ e.preventDefault(); });
+
+// ── WhatsApp 号码保护 ──
+(function(){
+  var p1='8615382453746', p2='8615062540745';
+  document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
+    var href = a.getAttribute('href');
+    var msg = href.split('?text=')[1] || '';
+    a.removeAttribute('href');
+    a.style.cursor='pointer';
+    a.addEventListener('click', function(e){
+      e.stopPropagation();
+      window.open('https://wa.me/'+p1+(msg?'?text='+msg:''), '_blank');
+    });
+  });
+})();
+</script>
 <!-- ── COOKIE BANNER ── -->
 <div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#fff;border-top:3px solid #f5b400;box-shadow:0 -4px 24px rgba(0,0,0,.13);padding:20px 24px;font-family:'DM Sans',sans-serif">
   <div style="max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
