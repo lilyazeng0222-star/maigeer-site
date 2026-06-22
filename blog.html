@@ -172,7 +172,42 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 
 @media(max-width:960px){.menu,.nav-wa{display:none}.burger{display:flex}.footer-grid{grid-template-columns:1fr 1fr;gap:28px}.footer-bot{flex-direction:column;gap:12px}}
 @media(max-width:600px){.footer-grid{grid-template-columns:1fr}.fcta-inner{flex-direction:column;align-items:flex-start}}
-.blog-section{background:#f8fafc;padding:66px 0 88px}
+.blog-section{background:#f8fafc;padding:72px 0 96px}
+.blog-header{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:48px;flex-wrap:wrap}
+.section-tag{display:inline-block;background:rgba(245,180,0,.15);color:var(--navy);border:1px solid rgba(245,180,0,.4);padding:5px 12px;border-radius:999px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px;font-family:"DM Sans",sans-serif}
+.blog-title{font-size:clamp(30px,3.5vw,44px);color:var(--navy);text-transform:uppercase;letter-spacing:.02em;line-height:1;margin-bottom:10px}
+.blog-sub{color:var(--muted);font-size:14px;max-width:480px;line-height:1.7}
+.blog-stats{display:flex;gap:28px;flex-shrink:0}
+.bstat{text-align:center}
+.bstat-num{font-family:"Bebas Neue",sans-serif;font-size:36px;color:var(--gold);line-height:1}
+.bstat-label{font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
+.featured-card{display:grid;grid-template-columns:420px 1fr;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:28px;text-decoration:none;color:inherit;transition:all .25s}
+.featured-card:hover{transform:translateY(-3px);box-shadow:0 24px 48px rgba(6,26,47,.14);border-color:rgba(245,180,0,.4)}
+.fc-photo{background:linear-gradient(135deg,var(--navy),var(--navy2));position:relative;min-height:320px;display:flex;align-items:center;justify-content:center}
+.fc-photo-inner{text-align:center;padding:32px}
+.fc-badge{display:inline-block;background:var(--gold);color:var(--navy);font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:999px;margin-bottom:24px}
+.fc-machine-icon{font-size:80px;margin-bottom:16px;filter:drop-shadow(0 4px 12px rgba(0,0,0,.3))}
+.fc-photo-label{color:rgba(255,255,255,.6);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.fc-body{padding:36px}
+.fc-meta-row{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.fc-date{font-size:12px;color:var(--muted);font-weight:600}
+.fc-title{font-family:"Bebas Neue",sans-serif;font-size:clamp(26px,2.8vw,36px);color:var(--navy);text-transform:uppercase;letter-spacing:.02em;line-height:1.05;margin-bottom:14px}
+.fc-desc{color:#4b5563;font-size:14px;line-height:1.75;margin-bottom:20px}
+.fc-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.fc-tags span{background:var(--light);color:var(--navy);font-size:12px;font-weight:600;padding:5px 10px;border-radius:6px;border:1px solid var(--line)}
+.fc-case-info{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px;padding:16px;background:var(--light);border-radius:10px}
+.fc-info-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.fc-info-val{font-size:14px;font-weight:700;color:var(--navy)}
+.fc-read{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--navy);font-family:"Bebas Neue",sans-serif;font-size:15px;letter-spacing:.08em;text-transform:uppercase;padding:11px 22px;border-radius:7px;transition:background .2s}
+.featured-card:hover .fc-read{background:var(--gold2)}
+.fc-read span{transition:transform .2s}
+.featured-card:hover .fc-read span{transform:translateX(4px)}
+.coming-soon-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cs-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;box-shadow:var(--shadow);display:flex;gap:16px;align-items:flex-start;opacity:.75}
+.cs-icon{font-size:28px;flex-shrink:0;margin-top:2px}
+.cs-tag{display:inline-block;background:rgba(102,112,133,.1);color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:4px;margin-bottom:8px}
+.cs-title{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:7px;line-height:1.3}
+.cs-desc{font-size:13px;color:var(--muted);line-height:1.6}
 .blog-layout{display:grid;grid-template-columns:1fr .38fr;gap:32px;align-items:start}
 .featured{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:24px;display:grid;grid-template-columns:1fr 1fr}
 .fp-photo{min-height:300px;background:#e8ecf0;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
@@ -287,51 +322,84 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 <h1>Machine Guides &amp;<br/>Export Tips</h1>
 <p>Useful guides for global buyers: how to choose used machines, compare models, avoid buying risks and understand export shipping.</p>
 </div></section>
-<section class="blog-section"><div class="wrap blog-layout">
-<div>
-<article class="featured">
-<div class="fp-photo"><img alt="Blog" onerror="this.parentElement.innerHTML='&lt;div class=fp-ph&gt;📸 Add blog photo&lt;/div&gt;'" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&amp;q=80"/></div>
-<div class="fp-body">
-<span class="post-tag">Buying Guide</span>
-<h2>How to Choose a Used Excavator from China</h2>
-<div class="fp-meta">Buyer Guide · Used Excavators · 5 min read</div>
-<p>Learn how to check engine condition, hydraulic system, working hours, undercarriage and real machine videos before buying.</p>
+<section class="blog-section">
+  <div class="wrap">
 
-</div>
-</article>
-<div class="post-grid">
-<article class="post-card"><div class="pc-photo"><div class="fp-ph">📸 Add photo</div></div><div class="pc-body"><span class="post-tag">Comparison</span><h3>CAT 320D vs Komatsu PC200</h3><p>A practical comparison for buyers choosing 20-ton used excavators.</p></div></article>
-<article class="post-card"><div class="pc-photo"><div class="fp-ph">📸 Add photo</div></div><div class="pc-body"><span class="post-tag">Export</span><h3>How We Ship Used Machines Worldwide</h3><p>Understand container, flat rack, RoRo and bulk vessel options.</p></div></article>
-<article class="post-card"><div class="pc-photo"><div class="fp-ph">📸 Add photo</div></div><div class="pc-body"><span class="post-tag">Risk Control</span><h3>5 Mistakes When Buying Used Machinery</h3><p>Useful tips to avoid hidden condition problems and poor communication.</p></div></article>
-<article class="post-card"><div class="pc-photo"><div class="fp-ph">📸 Add photo</div></div><div class="pc-body"><span class="post-tag">Customer Case</span><h3>Used Excavator Delivered to South America</h3><p>How inspection, loading photos and shipping support helped the buyer.</p></div></article>
-</div>
-</div>
-<aside class="sidebar-blog">
-<div class="sb-card sb-cta">
-<h3>Need Machine Advice?</h3>
-<p>Tell us your model, budget and country. We will recommend suitable machines.</p>
+    <!-- 版块标题 -->
+    <div class="blog-header">
+      <div>
+        <span class="section-tag">Real Cases & Guides</span>
+        <h2 class="blog-title">Export Cases &<br/>Buyer Guides</h2>
+        <p class="blog-sub">Real machine export records and practical guides for global buyers. Updated regularly as new cases complete.</p>
+      </div>
+      <div class="blog-stats">
+        <div class="bstat"><div class="bstat-num">1</div><div class="bstat-label">Published</div></div>
+        <div class="bstat"><div class="bstat-num">30+</div><div class="bstat-label">Countries Shipped</div></div>
+        <div class="bstat"><div class="bstat-num">500+</div><div class="bstat-label">Machines Exported</div></div>
+      </div>
+    </div>
 
-</div>
-<div class="sb-card">
-<h3>Categories</h3>
-<div class="cat-list">
-<a href="#"><span>Buying Guide</span><span>12</span></a>
-<a href="#"><span>Machine Comparison</span><span>8</span></a>
-<a href="#"><span>Shipping Tips</span><span>6</span></a>
-<a href="#"><span>Customer Cases</span><span>5</span></a>
-<a href="#"><span>Inspection Tips</span><span>9</span></a>
-</div>
-</div>
-<div class="sb-card">
-<h3>Popular Posts</h3>
-<div class="pop-list">
-<a class="pop-item" href="#"><div class="pop-thumb"><div class="pop-ph">PHOTO</div></div><div><b>CAT 320D Buying Guide</b><span>Used Excavator</span></div></a>
-<a class="pop-item" href="#"><div class="pop-thumb"><div class="pop-ph">PHOTO</div></div><div><b>FOB vs CIF Shipping</b><span>Export Tips</span></div></a>
-<a class="pop-item" href="#"><div class="pop-thumb"><div class="pop-ph">PHOTO</div></div><div><b>How to Check Engine Condition</b><span>Inspection Tips</span></div></a>
-</div>
-</div>
-</aside>
-</div></section>
+    <!-- Featured 文章：SDLG 956F Libya -->
+    <a href="blog/sdlg-956f-export-libya.html" class="featured-card">
+      <div class="fc-photo">
+        <div class="fc-photo-inner">
+          <div class="fc-badge">🏆 Featured Case</div>
+          <div class="fc-machine-icon">🏗️</div>
+          <div class="fc-photo-label">SDLG 956F · Libya Export</div>
+        </div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-meta-row">
+          <span class="post-tag">Export Case</span>
+          <span class="fc-date">📅 June 2026</span>
+        </div>
+        <h2 class="fc-title">Used SDLG 956F Wheel Loader Exported to Libya</h2>
+        <p class="fc-desc">A real export case from MAIGEER Machinery — how a used SDLG 956F wheel loader was inspected, loaded into a 40ft container and shipped from Shanghai to Libya with full documentation.</p>
+        <div class="fc-tags">
+          <span>🚢 Container Shipping</span>
+          <span>🔧 Full Inspection</span>
+          <span>📦 FOB Shanghai</span>
+          <span>🌍 Libya</span>
+        </div>
+        <div class="fc-case-info">
+          <div class="fc-info-item"><div class="fc-info-label">Machine</div><div class="fc-info-val">SDLG 956F Wheel Loader</div></div>
+          <div class="fc-info-item"><div class="fc-info-label">Destination</div><div class="fc-info-val">Libya, North Africa</div></div>
+          <div class="fc-info-item"><div class="fc-info-label">Shipping</div><div class="fc-info-val">40ft Container · FOB</div></div>
+        </div>
+        <div class="fc-read">Read Full Case <span>→</span></div>
+      </div>
+    </a>
+
+    <!-- 即将发布提示 -->
+    <div class="coming-soon-grid">
+      <div class="cs-card">
+        <div class="cs-icon">✍️</div>
+        <div class="cs-content">
+          <div class="cs-tag">Coming Soon</div>
+          <div class="cs-title">How to Choose a Used Excavator from China</div>
+          <div class="cs-desc">A complete buyer's guide covering inspection checklist, working hours, engine condition and video verification.</div>
+        </div>
+      </div>
+      <div class="cs-card">
+        <div class="cs-icon">✍️</div>
+        <div class="cs-content">
+          <div class="cs-tag">Coming Soon</div>
+          <div class="cs-title">CAT 320D vs Komatsu PC200 — Which to Buy?</div>
+          <div class="cs-desc">A practical comparison for buyers choosing between the two most popular 20-ton used excavators.</div>
+        </div>
+      </div>
+      <div class="cs-card">
+        <div class="cs-icon">✍️</div>
+        <div class="cs-content">
+          <div class="cs-tag">Coming Soon</div>
+          <div class="cs-title">Container vs RoRo Shipping — What's Best for Your Machine?</div>
+          <div class="cs-desc">Understanding the difference between shipping methods and which works best for excavators, loaders and bulldozers.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 <section class="final-cta"><div class="wrap fcta-inner"><h2>Ready to Find Your <span style="color:var(--gold)">Machine</span>?</h2><p>Contact us now to get real machine photos, working videos and the latest stock list.</p></div></section>
 <footer class="footer">
 <div class="wrap">
