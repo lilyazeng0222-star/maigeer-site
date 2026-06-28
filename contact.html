@@ -406,7 +406,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
         <h3>Ready to Buy? Get a Quote Today.</h3>
         <p>Tell us what machine you need and where you want to ship it. We'll reply within 24 hours with real photos, video, and honest pricing.</p>
       </div>
-      <a href="https://wa.me/8615382453746?text=Hello Lilya, I would like a quote for:" target="_blank" class="btn btn-navy">Get a Free Quote →</a>
+      <a href="https://wa.me/8615382453746?text=Hello, I would like a quote for:" target="_blank" class="btn btn-navy">Get a Free Quote →</a>
     </div>
 
         <!-- Footer bottom: unified 3-column with contact row on top -->
@@ -532,7 +532,7 @@ function submitForm(){
   }
 
   // 1) Always open WhatsApp
-  var waText = "Hello Lilya,\n\nName: "+n+"\nCountry: "+c+"\nContact: "+ct+"\nMachine: "+m+(msg?"\nMessage: "+msg:"");
+  var waText = "Hello,\n\nName: "+n+"\nCountry: "+c+"\nContact: "+ct+"\nMachine: "+m+(msg?"\nMessage: "+msg:"");
   window.open("https://wa.me/8615382453746?text="+encodeURIComponent(waText), "_blank");
 
   // 2) Send email backup via EmailJS (only if configured)
