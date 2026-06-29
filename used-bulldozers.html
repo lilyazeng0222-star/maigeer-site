@@ -448,6 +448,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
       <a href="#bulldozers-grid" class="btn" style="background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.25)">View All Models ↓</a>
     </div>
     <div class="hero-stats">
+      <div class="hs"><div class="hs-n" id="heroStockCount">0</div><div class="hs-l">Bulldozers In Stock</div></div>
       <div class="hs"><div class="hs-n">2</div><div class="hs-l">Brands Sourced</div></div>
       <div class="hs"><div class="hs-n">100%</div><div class="hs-l">Pre-ship Inspection</div></div>
       <div class="hs"><div class="hs-n">24H</div><div class="hs-l">Quote Response</div></div>
@@ -555,7 +556,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
     </div>
 
     <div class="pg-products" id="prodGrid"></div>
-    <div id="emptyMsg" style="display:block">
+    <div id="emptyMsg" style="display:none">
       <div style="font-size:40px;margin-bottom:16px">🚜</div>
       <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--navy);margin-bottom:8px">No units listed yet — but we can source one</div>
       <p style="font-size:14px">Tell us the blade size and horsepower you need and we'll check current availability with our suppliers — <a href="https://wa.me/8615382453746?text=Hi Lilya, I need a used bulldozer. My requirements:" target="_blank" style="color:var(--gold);font-weight:700">ask Lilya on WhatsApp</a>.</p>
@@ -726,26 +727,65 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
-<!-- BRAND FILTER (static cards, show/hide by data-brand) -->
+<!-- PRODUCT DATA + RENDER -->
 <script>
-function filterBrand(brand, btn) {
-  document.querySelectorAll(".bb-btn").forEach(b => b.classList.remove("on"));
-  btn.classList.add("on");
+const BULLDOZERS = [
+  { id:"shantui-sd13", brand:"SHANTUI", brandFull:"Shantui", name:"SHANTUI SD13", img:"products/image/shantui-sd13_(1).webp", specs:[["Year","2024"],["Hours","500H"],["Weight","13 T"]], detail:"products/shantui-sd13-detail.html", wa:"https://wa.me/8615382453746?text=Hi%2C+I%27m+interested+in+SHANTUI+SD13.+Please+send+details." },
+  { id:"shantui-sd16", brand:"SHANTUI", brandFull:"Shantui", name:"SHANTUI SD16", img:"products/image/shantui-sd16_(1).webp", specs:[["Year","2024"],["Hours","400H"],["Weight","17 T"]], detail:"products/shantui-sd16-detail.html", wa:"https://wa.me/8615382453746?text=Hi%2C+I%27m+interested+in+SHANTUI+SD16.+Please+send+details." },
+  { id:"cat-d5k", brand:"CAT", brandFull:"Caterpillar", name:"CAT D5K", img:"products/image/cat-d5k_(1).webp", specs:[["Year","2023"],["Hours","500H"],["Weight","9.7 T"]], detail:"products/cat-d5k-detail.html", wa:"https://wa.me/8615382453746?text=Hi%2C+I%27m+interested+in+CAT+D5K.+Please+send+details." },
+  { id:"cat-d6g", brand:"CAT", brandFull:"Caterpillar", name:"CAT D6G", img:"products/image/cat-d6g_(1).webp", specs:[["Year","2024"],["Hours","500H"],["Weight","22 T"]], detail:"products/cat-d6g-detail.html", wa:"https://wa.me/8615382453746?text=Hi%2C+I%27m+interested+in+CAT+D6G.+Please+send+details." },
+  { id:"cat-d6r", brand:"CAT", brandFull:"Caterpillar", name:"CAT D6R", img:"products/image/cat-d6r_(1).webp", specs:[["Year","2018"],["Hours","300H"],["Weight","23 T"]], detail:"products/cat-d6r-detail.html", wa:"https://wa.me/8615382453746?text=Hi%2C+I%27m+interested+in+CAT+D6R.+Please+send+details." },
+  { id:"cat-d7g", brand:"CAT", brandFull:"Caterpillar", name:"CAT D7G", img:"products/image/cat-d7g_(1).webp", specs:[["Year","2015"],["Hours","2880H"],["Weight","20 T"]], detail:"products/cat-d7g-detail.html", wa:"https://wa.me/8615382453746?text=Hi%2C+I%27m+interested+in+CAT+D7G.+Please+send+details." },
+  { id:"cat-d7r", brand:"CAT", brandFull:"Caterpillar", name:"CAT D7R", img:"products/image/cat-d7r_(1).webp", specs:[["Year","2018"],["Hours","3270H"],["Weight","25 T"]], detail:"products/cat-d7r-detail.html", wa:"https://wa.me/8615382453746?text=Hi%2C+I%27m+interested+in+CAT+D7R.+Please+send+details." },
+  { id:"cat-d8r", brand:"CAT", brandFull:"Caterpillar", name:"CAT D8R", img:"products/image/cat-d8r_(1).webp", specs:[["Year","2013"],["Hours","3760H"],["Weight","35 T"]], detail:"products/cat-d8r-detail.html", wa:"https://wa.me/8615382453746?text=Hi%2C+I%27m+interested+in+CAT+D8R.+Please+send+details." }
+];
 
-  const cards = document.querySelectorAll("#prodGrid .pcard");
+let activeBrand = "all";
+
+function filterBrand(brand, btn) {
+  activeBrand = brand;
+  document.querySelectorAll('.bb-btn').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  renderGrid();
+}
+
+function renderGrid() {
+  const grid = document.getElementById("prodGrid");
   const empty = document.getElementById("emptyMsg");
   const count = document.getElementById("prodCount");
-  let visible = 0;
-
-  cards.forEach(card => {
-    const match = brand === "all" || card.dataset.brand === brand;
-    card.style.display = match ? "" : "none";
-    if (match) visible++;
-  });
-
-  count.textContent = visible;
-  empty.style.display = visible === 0 ? "block" : "none";
+  const list = activeBrand === "all" ? BULLDOZERS : BULLDOZERS.filter(m => m.brand === activeBrand);
+  count.textContent = list.length;
+  if (list.length === 0) {
+    grid.innerHTML = "";
+    empty.style.display = "block";
+    return;
+  }
+  empty.style.display = "none";
+  grid.innerHTML = list.map(m => `
+    <div class="pcard" onclick="location.href='${m.detail}'">
+      <div class="pcard-img">
+        <img src="${m.img}" alt="${m.name} used bulldozer for sale China" loading="lazy" onerror="this.style.display='none'">
+        <div class="pcard-badge">BULLDOZER</div>
+        <div class="pcard-status">In Stock</div>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-brand">${m.brandFull.toUpperCase()}</div>
+        <div class="pcard-name">${m.name}</div>
+        <div class="pcard-specs">
+          ${m.specs.map(s => `<span class="pcard-spec">${s[0]}: ${s[1]}</span>`).join('')}
+        </div>
+      </div>
+      <a class="pcard-wa" href="${m.wa}" target="_blank" onclick="event.stopPropagation()">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp for Price
+      </a>
+    </div>
+  `).join('');
 }
+
+renderGrid();
+const heroStockEl = document.getElementById("heroStockCount");
+if (heroStockEl) heroStockEl.textContent = BULLDOZERS.length;
 </script>
 
 
