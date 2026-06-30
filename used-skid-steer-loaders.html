@@ -133,6 +133,20 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 .menu{display:flex;gap:30px;list-style:none}
 .menu a{color:rgba(255,255,255,.6);font-family:"DM Sans",sans-serif;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
 .menu a:hover,.menu a.on{color:var(--gold);border-bottom-color:var(--gold)}
+.menu li{position:relative}
+.menu .has-dropdown>a{display:flex;align-items:center;gap:5px;cursor:pointer}
+.menu .has-dropdown>a::after{content:'';width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-3px;transition:transform .2s}
+.menu .has-dropdown:hover>a::after{transform:rotate(225deg);margin-top:1px}
+.dropdown-panel{position:absolute;top:100%;left:50%;transform:translateX(-50%);min-width:230px;background:#0d2138;border:1px solid rgba(255,255,255,.1);border-radius:8px;box-shadow:0 16px 34px rgba(0,0,0,.35);padding:8px;padding-top:16px;margin-top:-8px;display:none;flex-direction:column;gap:1px;z-index:300}
+.menu .has-dropdown:hover>.dropdown-panel{display:flex}
+.dropdown-panel a{padding:10px 14px;font-size:12px;font-weight:600;letter-spacing:.03em;text-transform:none;color:rgba(255,255,255,.65);border-radius:6px;border-bottom:none;white-space:nowrap}
+.dropdown-panel a:hover{background:rgba(245,180,0,.1);color:var(--gold);border-bottom:none}
+.has-dropdown.sub{position:relative}
+.has-dropdown.sub>a{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.submenu-arrow{opacity:.5;font-size:14px}
+.has-dropdown.sub:hover>a .submenu-arrow{opacity:1;color:var(--gold)}
+.sub-panel{top:-9px;left:calc(100% + 6px);margin-top:0;padding-top:8px}
+.has-dropdown.sub:hover>.sub-panel{display:flex}
 .nav-wa{display:flex;align-items:center;gap:7px;background:var(--gold);color:var(--navy);font-family:"DM Sans",sans-serif;font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:9px 20px;transition:background .2s;white-space:nowrap}
 .nav-wa:hover{background:var(--gold2)}
 .nav-wa svg{width:14px;height:14px;fill:var(--navy)}
