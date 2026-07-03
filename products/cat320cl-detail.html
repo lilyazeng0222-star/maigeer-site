@@ -549,8 +549,8 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
           <div class="thumb" onclick="switchImg(this,'image/CAT_320CL_(4).webp')"><img src="image/CAT_320CL_(4).webp" alt="thumb4"></div>
           <div class="thumb" onclick="switchImg(this,'image/CAT_320CL_(5).webp')"><img src="image/CAT_320CL_(5).webp" alt="thumb5"></div>
         </div>
-        <!-- Video Strip -->
-        <a class="video-strip" href="https://www.youtube.com/watch?v=pjb89rj0TVw" target="_blank" rel="noopener" style="text-decoration:none">
+        <!-- Video Strip (click to expand inline embed, stays on page) -->
+        <a class="video-strip" href="javascript:void(0)" onclick="loadInlineVideo(this,'pjb89rj0TVw')" style="text-decoration:none">
           <div class="vs-play">
             <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
           </div>
@@ -560,6 +560,8 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
           </div>
           <div class="vs-dur">4:32</div>
         </a>
+        <!-- Inline video embed container, injected on click -->
+        <div id="inlineVideoWrap" style="display:none;margin-top:4px;position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;background:#000"></div>
       </div>
 
       <!-- Info Panel -->
@@ -1274,6 +1276,18 @@ function switchTab(id, btn) {
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.getElementById('tab-' + id).classList.add('active');
   btn.classList.add('active');
+}
+
+// Inline video embed (stays on page, loads iframe only on click for speed)
+function loadInlineVideo(stripEl, videoId) {
+  const wrap = document.getElementById('inlineVideoWrap');
+  wrap.innerHTML = '<iframe src="https://www.youtube.com/embed/' + videoId +
+    '?autoplay=1&rel=0" title="Inspection Video" frameborder="0" ' +
+    'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ' +
+    'allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe>';
+  wrap.style.display = 'block';
+  stripEl.style.display = 'none';
+  wrap.scrollIntoView({behavior:'smooth', block:'nearest'});
 }
 
 // Gallery
