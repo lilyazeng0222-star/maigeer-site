@@ -125,6 +125,7 @@
   --navy3:#0d3156;
   --gold:#f5b400;
   --gold2:#ffd24d;
+  --gold-dark:#7a5700;
   --white:#fff;
   --light:#f5f7fa;
   --line:#d9dee7;
@@ -282,7 +283,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* ── SECTION SHARED ── */
-.sec-tag{display:inline-flex;align-items:center;gap:9px;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;font-family:"DM Sans",sans-serif}
+.sec-tag{display:inline-flex;align-items:center;gap:9px;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:10px;font-family:"DM Sans",sans-serif}
 .sec-tag::before{content:"";width:22px;height:1px;background:var(--gold)}
 .sec-h{font-size:clamp(34px,3.8vw,50px);line-height:.92;text-transform:uppercase;color:var(--navy);margin-bottom:14px;letter-spacing:.02em}
 .sec-h .g{color:var(--gold)}
@@ -402,7 +403,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 .si{display:flex;gap:18px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--line)}
 .si:last-child{border-bottom:none}
 .si-n{font-size:28px;color:var(--gold);opacity:.5;line-height:1;flex-shrink:0;width:36px;font-family:"Bebas Neue",sans-serif}
-.si h4{font-size:15px;color:var(--navy);margin-bottom:4px;font-weight:700}
+.si h3{font-size:15px;color:var(--navy);margin-bottom:4px;font-weight:700}
 .si p{font-size:13px;color:var(--muted);line-height:1.65}
 
 /* ── SHIPPING CASES ── */
@@ -629,6 +630,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 </header>
 <div class="mob-menu" id="mobMenu"><a href="index.html">Home</a><button class="mob-acc-btn" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Used Machinery <span class="mob-acc-arrow">▾</span></button><div class="mob-acc-panel"><a href="used-excavators.html">Used Excavators</a><a href="used-cat-excavators.html" class="mob-sub-link">— CAT</a><a href="used-excavators.html?brand=HITACHI" class="mob-sub-link">— Hitachi</a><a href="used-excavators.html?brand=KOMATSU" class="mob-sub-link">— Komatsu</a><a href="used-excavators.html?brand=DOOSAN" class="mob-sub-link">— Doosan</a><a href="used-excavators.html?brand=HYUNDAI" class="mob-sub-link">— Hyundai</a><a href="used-excavators.html?brand=VOLVO" class="mob-sub-link">— Volvo</a><a href="used-excavators.html?brand=SANY" class="mob-sub-link">— Sany</a><a href="used-excavators.html?brand=KOBELCO" class="mob-sub-link">— Kobelco</a><a href="used-excavators.html?brand=KUBOTA" class="mob-sub-link">— Kubota</a><a href="used-wheel-loaders.html">Used Wheel Loaders</a><a href="used-bulldozers.html">Used Bulldozers</a><a href="used-motor-graders.html">Used Motor Graders</a><a href="used-road-rollers.html">Used Road Rollers</a><a href="used-forklifts.html">Used Forklifts</a><a href="used-skid-steer-loaders.html">Used Skid Steer Loader</a><a href="used-backhoe-loaders.html">Used Backhoe Loader</a><a href="products.html">Used Dump Trucks</a></div><button class="mob-acc-btn" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">New Machinery <span class="mob-acc-arrow">▾</span></button><div class="mob-acc-panel"><a href="contact.html">New Hyundai Excavator</a><a href="contact.html">New Sany Excavator</a><a href="contact.html">New XCMG Excavator</a><a href="contact.html">New Develon Excavator</a><a href="contact.html">New Truck Trailers</a></div><a href="shipping.html">Shipping</a><a href="blog.html">Blog</a><a href="about_us.html">About Us</a><a href="contact.html">Contact</a><a href="https://wa.me/8615382453746" target="_blank">💬 WHATSAPP</a></div>
 
+<main>
 <!-- HERO -->
 <section id="hero">
   <div class="hero-left">
@@ -852,7 +854,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
   <div class="wrap">
     <div class="insp-grid">
       <div class="insp-img-box">
-        <div class="insp-img"><img src="https://i.ibb.co/8ZrYNhf/20260511133150-258-911.png" alt="Machine Inspection MAIGEER Machinery"></div>
+        <div class="insp-img"><img src="images/machine-inspection.webp" alt="Machine Inspection MAIGEER Machinery"></div>
         <div class="insp-accent"><div class="ia-n">100%</div><div class="ia-l">Inspected Before Shipment</div></div>
       </div>
       <div>
@@ -860,11 +862,11 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
         <h2 class="sec-h">Inspection <span class="g">Process</span></h2>
         <p class="sec-sub" style="margin-bottom:6px">Every machine goes through 5 steps before we confirm availability to buyers.</p>
         <div class="steps">
-          <div class="si"><div class="si-n">01</div><div><h4>Engine Performance Test</h4><p>Start test, idle and load performance, oil pressure and smoke analysis.</p></div></div>
-          <div class="si"><div class="si-n">02</div><div><h4>Hydraulic System Inspection</h4><p>All cylinders, pumps, hoses and control valves tested under load.</p></div></div>
-          <div class="si"><div class="si-n">03</div><div><h4>Working Condition Test</h4><p>Full operation test — digging, lifting, grading or compaction as applicable.</p></div></div>
-          <div class="si"><div class="si-n">04</div><div><h4>Leakage &amp; Structure Check</h4><p>Frame, boom, undercarriage, pins and bushings physically checked.</p></div></div>
-          <div class="si"><div class="si-n">05</div><div><h4>Video Report Before Shipment</h4><p>Full video sent to buyer before loading. What you approve is what ships.</p></div></div>
+          <div class="si"><div class="si-n">01</div><div><h3>Engine Performance Test</h3><p>Start test, idle and load performance, oil pressure and smoke analysis.</p></div></div>
+          <div class="si"><div class="si-n">02</div><div><h3>Hydraulic System Inspection</h3><p>All cylinders, pumps, hoses and control valves tested under load.</p></div></div>
+          <div class="si"><div class="si-n">03</div><div><h3>Working Condition Test</h3><p>Full operation test — digging, lifting, grading or compaction as applicable.</p></div></div>
+          <div class="si"><div class="si-n">04</div><div><h3>Leakage &amp; Structure Check</h3><p>Frame, boom, undercarriage, pins and bushings physically checked.</p></div></div>
+          <div class="si"><div class="si-n">05</div><div><h3>Video Report Before Shipment</h3><p>Full video sent to buyer before loading. What you approve is what ships.</p></div></div>
         </div>
       </div>
     </div>
@@ -877,9 +879,9 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
     <div class="sec-tag">Export Cases</div>
     <h2 class="sec-h">Shipping <span class="g">Cases</span></h2>
     <div class="ship-grid">
-      <a href="shipping.html" class="sc"><div class="sc-img"><img src="https://i.ibb.co/b5cjVLyv/20260511133730-1594-21.jpg" alt="CAT 320D Used Excavator Export China"></div><div class="sc-body"><div class="sc-dest">🌎 South America</div><h3>CAT 320D to South America</h3><p>Full inspection, container loading and export documentation completed on time.</p></div></a>
-      <a href="shipping.html" class="sc"><div class="sc-img"><img src="https://i.ibb.co/WNm2Ythx/20260511134017-1595-21.jpg" alt="SDLG 956 Wheel Loader Export China"></div><div class="sc-body"><div class="sc-dest">🌍 Africa</div><h3>SDLG 956 to Africa</h3><p>3 units shipped together via RORO. Reduced freight cost with full tracking.</p></div></a>
-      <a href="shipping.html" class="sc"><div class="sc-img"><img src="https://i.ibb.co/sJp1wN4M/20260511134116-1596-21.jpg" alt="CAT 140H Motor Grader Export China"></div><div class="sc-body"><div class="sc-dest">🌏 Middle East</div><h3>CAT 140H to Middle East</h3><p>Graders and rollers on flat-rack containers with full customs documents.</p></div></a>
+      <a href="shipping.html" class="sc"><div class="sc-img"><img src="images/cat-320d-export-south-america.webp" alt="CAT 320D Used Excavator Export China"></div><div class="sc-body"><div class="sc-dest">🌎 South America</div><h3>CAT 320D to South America</h3><p>Full inspection, container loading and export documentation completed on time.</p></div></a>
+      <a href="shipping.html" class="sc"><div class="sc-img"><img src="images/sdlg-956-export-africa.webp" alt="SDLG 956 Wheel Loader Export China"></div><div class="sc-body"><div class="sc-dest">🌍 Africa</div><h3>SDLG 956 to Africa</h3><p>3 units shipped together via RORO. Reduced freight cost with full tracking.</p></div></a>
+      <a href="shipping.html" class="sc"><div class="sc-img"><img src="images/cat-140h-export-middle-east.webp" alt="CAT 140H Motor Grader Export China"></div><div class="sc-body"><div class="sc-dest">🌏 Middle East</div><h3>CAT 140H to Middle East</h3><p>Graders and rollers on flat-rack containers with full customs documents.</p></div></a>
     </div>
   </div>
 </section>
@@ -889,7 +891,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
   <div class="wrap">
     <div class="al-grid">
       <div class="al-img-box">
-        <div class="al-img" style="padding:0"><img src="https://i.ibb.co/ksMh06j8/Chat-GPT-Image-2026-5-11-12-33-37.png" alt="Our Team - MAIGEER Machinery Export Team" style="width:100%;height:100%;object-fit:cover;border-radius:12px"></div>
+        <div class="al-img" style="padding:0"><img src="images/our-team.webp" alt="Our Team - MAIGEER Machinery Export Team" style="width:100%;height:100%;object-fit:cover;border-radius:12px"></div>
         <div class="al-badge"><div class="al-badge-n">10+</div><div class="al-badge-l">Years Export</div></div>
       </div>
       <div class="al-text">
@@ -923,6 +925,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
     </div>
   </div>
 </section>
+</main>
 
 <!-- FOOTER -->
 <footer class="footer">
@@ -1043,7 +1046,7 @@ const PRODS=[
 function renderP(f){
   const g=document.getElementById("pg");
   const list=f==="all"?PRODS:PRODS.filter(p=>p.cat===f);
-  g.innerHTML=list.map(p=>`<div class="pc" onclick="window.location.href='${p.detail}'" style="cursor:pointer"><div class="pc-img">${p.img?`<img src="${p.img}" alt="${p.name}" onerror="this.parentElement.innerHTML='<div class=pc-ph>📸 Add photo</div>'">`:`<div class="pc-ph">📸 Add machine photo</div>`}${p.badge?`<div class="pc-badge">${p.badge}</div>`:""}</div><div class="pc-body"><div class="pc-brand">${p.brand}</div><div class="pc-name">${p.name}</div><div class="pc-desc">${p.desc}</div><div class="pc-foot"><a href="${p.wa}" target="_blank" class="pc-inq" onclick="event.stopPropagation()">Inquire →</a></div></div></div>`).join("");
+  g.innerHTML=list.map(p=>`<div class="pc" style="position:relative;cursor:pointer"><a class="pc-main" href="${p.detail}" aria-label="${p.name} details" style="position:absolute;inset:0;z-index:1"></a><div class="pc-img">${p.img?`<img src="${p.img}" alt="${p.name}" onerror="this.parentElement.innerHTML='<div class=pc-ph>📸 Add photo</div>'">`:`<div class="pc-ph">📸 Add machine photo</div>`}${p.badge?`<div class="pc-badge">${p.badge}</div>`:""}</div><div class="pc-body"><div class="pc-brand">${p.brand}</div><div class="pc-name">${p.name}</div><div class="pc-desc">${p.desc}</div><div class="pc-foot"><a href="${p.wa}" target="_blank" class="pc-inq" style="position:relative;z-index:2">Inquire →</a></div></div></div>`).join("");
 }
 function filterP(cat,btn){document.querySelectorAll(".pf-btn").forEach(b=>b.classList.remove("on"));btn.classList.add("on");renderP(cat);}
 renderP("all");
@@ -1340,7 +1343,7 @@ document.addEventListener('selectstart', function(e){ e.preventDefault(); });
   <div style="max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
     <div style="flex:1;min-width:260px">
       <p style="font-size:13px;font-weight:700;color:#061a2f;margin-bottom:6px;letter-spacing:.03em">🍪 We Value Your Privacy</p>
-      <p style="font-size:12px;color:#667085;line-height:1.6;margin:0">We use cookies to enhance your browsing experience, analyze traffic and improve our services. By clicking "Accept All", you consent to our use of cookies. <a href="contact.html" style="color:#f5b400;text-decoration:underline">Learn more</a></p>
+      <p style="font-size:12px;color:#667085;line-height:1.6;margin:0">We use cookies to enhance your browsing experience, analyze traffic and improve our services. By clicking "Accept All", you consent to our use of cookies. <a href="contact.html" style="color:#f5b400;text-decoration:underline">Learn more about our cookie policy</a></p>
     </div>
     <div style="display:flex;gap:8px;flex-shrink:0;flex-wrap:wrap">
       <button onclick="cookieChoice('reject')" style="padding:9px 20px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:1.5px solid #d9dee7;background:#fff;color:#667085;cursor:pointer;border-radius:5px;font-family:'DM Sans',sans-serif;transition:all .2s">Reject All</button>
