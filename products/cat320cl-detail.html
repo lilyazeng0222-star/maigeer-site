@@ -183,15 +183,34 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
 .thumb img{width:100%;height:100%;object-fit:cover;opacity:.7;transition:opacity .2s}
 .thumb.active img,.thumb:hover img{opacity:1}
 
-/* Video strip */
-.video-strip{background:var(--navy3);padding:14px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:background .2s;margin-top:4px}
-.video-strip:hover{background:#104070}
-.vs-play{width:42px;height:42px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.vs-play svg{width:16px;height:16px;fill:var(--navy);margin-left:2px}
-.vs-text{flex:1}
-.vs-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:2px}
-.vs-title{font-size:14px;font-weight:600;color:#fff}
-.vs-dur{font-size:12px;color:rgba(255,255,255,.35);margin-left:auto;white-space:nowrap}
+/* Video Window — diagnostic viewfinder style */
+.video-window{position:relative;max-width:720px;border-radius:10px;overflow:hidden;background:var(--navy);box-shadow:0 20px 44px rgba(6,26,47,.22)}
+.vw-media{position:relative;width:100%;padding-bottom:56.25%;height:0;overflow:hidden;background:#000;cursor:pointer}
+.vw-media iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vw-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.62) saturate(1.05)}
+.vw-scan{position:absolute;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(245,180,0,.55),transparent);animation:vwScan 3.2s linear infinite;pointer-events:none}
+@keyframes vwScan{0%{top:6%}50%{top:92%}100%{top:6%}}
+.vw-corner{position:absolute;width:26px;height:26px;border-color:var(--gold);opacity:.85;pointer-events:none;z-index:3}
+.vw-corner.tl{top:12px;left:12px;border-top:2px solid var(--gold);border-left:2px solid var(--gold)}
+.vw-corner.tr{top:12px;right:12px;border-top:2px solid var(--gold);border-right:2px solid var(--gold)}
+.vw-corner.bl{bottom:12px;left:12px;border-bottom:2px solid var(--gold);border-left:2px solid var(--gold)}
+.vw-corner.br{bottom:12px;right:12px;border-bottom:2px solid var(--gold);border-right:2px solid var(--gold)}
+.vw-topbar{position:absolute;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:16px 20px;z-index:3;pointer-events:none}
+.vw-rec{display:flex;align-items:center;gap:7px;background:rgba(6,26,47,.55);backdrop-filter:blur(3px);padding:5px 10px 5px 8px;border-radius:20px;font-family:"DM Sans",sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;color:#fff;text-transform:uppercase}
+.vw-dot{width:7px;height:7px;border-radius:50%;background:#ff3b30;box-shadow:0 0 0 0 rgba(255,59,48,.6);animation:vwPulse 1.6s ease-out infinite}
+@keyframes vwPulse{0%{box-shadow:0 0 0 0 rgba(255,59,48,.55)}70%{box-shadow:0 0 0 8px rgba(255,59,48,0)}100%{box-shadow:0 0 0 0 rgba(255,59,48,0)}}
+.vw-duration{background:rgba(6,26,47,.55);backdrop-filter:blur(3px);padding:5px 10px;border-radius:5px;font-family:"DM Sans",sans-serif;font-size:11px;font-weight:600;letter-spacing:.04em;color:#fff}
+.vw-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:74px;height:74px;border-radius:50%;background:var(--gold);border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:3;transition:transform .2s,background .2s}
+.vw-play::before{content:'';position:absolute;inset:-14px;border-radius:50%;border:1.5px solid rgba(245,180,0,.5);animation:vwRing 2.2s ease-out infinite}
+@keyframes vwRing{0%{transform:scale(.85);opacity:1}100%{transform:scale(1.35);opacity:0}}
+.vw-play svg{width:24px;height:24px;fill:var(--navy);margin-left:3px}
+.video-window:hover .vw-play{background:var(--gold2);transform:translate(-50%,-50%) scale(1.06)}
+.vw-bottombar{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding:34px 20px 16px;background:linear-gradient(0deg,rgba(6,26,47,.88) 0%,transparent 100%);z-index:3;pointer-events:none}
+.vw-title{font-family:"DM Sans",sans-serif;font-size:13px;font-weight:600;color:#fff;line-height:1.4;max-width:80%}
+.vw-hd{flex-shrink:0;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);color:#fff;font-family:"DM Sans",sans-serif;font-size:10px;font-weight:700;letter-spacing:.06em;padding:3px 7px;border-radius:4px}
+.video-window.playing .vw-scan,.video-window.playing .vw-play,.video-window.playing .vw-poster{display:none}
+@media(max-width:560px){.vw-title{font-size:11.5px;max-width:70%}.vw-play{width:58px;height:58px}.vw-play svg{width:18px;height:18px}.vw-corner{width:18px;height:18px}}
+
 
 /* Product Info Panel */
 .ph-info{color:#fff;padding-top:10px;padding-bottom:60px}
@@ -549,19 +568,6 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
           <div class="thumb" onclick="switchImg(this,'image/CAT_320CL_(4).webp')"><img src="image/CAT_320CL_(4).webp" alt="thumb4"></div>
           <div class="thumb" onclick="switchImg(this,'image/CAT_320CL_(5).webp')"><img src="image/CAT_320CL_(5).webp" alt="thumb5"></div>
         </div>
-        <!-- Video Strip (click to expand inline embed, stays on page) -->
-        <a class="video-strip" href="javascript:void(0)" onclick="loadInlineVideo(this,'pjb89rj0TVw')" style="text-decoration:none">
-          <div class="vs-play">
-            <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
-          </div>
-          <div class="vs-text">
-            <div class="vs-label">Inspection Video</div>
-            <div class="vs-title">Full walkaround · engine start · undercarriage check</div>
-          </div>
-          <div class="vs-dur">4:32</div>
-        </a>
-        <!-- Inline video embed container, injected on click -->
-        <div id="inlineVideoWrap" style="display:none;margin-top:4px;position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;background:#000"></div>
       </div>
 
       <!-- Info Panel -->
@@ -625,26 +631,6 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
             </button>
           </div>
         </div>
-
-        <!-- Trust -->
-        <div class="trust-row">
-          <div class="trust-item">
-            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-            <span data-i18n="trust1">Real Video Inspection</span>
-          </div>
-          <div class="trust-item">
-            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-            <span data-i18n="trust2">Global Shipping</span>
-          </div>
-          <div class="trust-item">
-            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-            <span data-i18n="trust3">L/C &amp; T/T Accepted</span>
-          </div>
-          <div class="trust-item">
-            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-            <span data-i18n="trust4">10+ Years Export</span>
-          </div>
-        </div>
       </div>
     </div><!-- /ph-grid -->
   </div>
@@ -686,6 +672,34 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
           <div class="spec-row"><span class="spec-key" data-i18n="sk_type">Type</span><span class="spec-val" data-i18n="sv_type">Crawler Excavator</span></div>
           <div class="spec-row"><span class="spec-key" data-i18n="sk_origin">Origin</span><span class="spec-val" data-i18n="sv_origin">Japan</span></div>
           <div class="spec-row"><span class="spec-key" data-i18n="sk_delivery">Delivery Time</span><span class="spec-val" data-i18n="sv_delivery">3–5 Days</span></div>
+        </div>
+      </div>
+
+      <!-- Inspection Video (below specs table) -->
+      <div style="margin-bottom:16px">
+        <div class="sec-tag" data-i18n="video_tag">Testing Video</div>
+        <h2 class="sec-h video-section-title" data-i18n="dp_video_title">Used CAT Excavator 320C Testing Video</h2>
+      </div>
+
+      <div class="video-window" id="videoWindow">
+        <div class="vw-media" id="vwMedia" onclick="loadInlineVideo(this,'pjb89rj0TVw')">
+          <img class="vw-poster" src="https://img.youtube.com/vi/pjb89rj0TVw/maxresdefault.jpg" alt="CAT 320CL inspection video preview">
+          <div class="vw-scan"></div>
+          <button class="vw-play" aria-label="Play inspection video">
+            <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+          </button>
+        </div>
+        <div class="vw-corner tl"></div>
+        <div class="vw-corner tr"></div>
+        <div class="vw-corner bl"></div>
+        <div class="vw-corner br"></div>
+        <div class="vw-topbar">
+          <div class="vw-rec"><span class="vw-dot"></span>Inspection Footage</div>
+          <div class="vw-duration">04:32</div>
+        </div>
+        <div class="vw-bottombar">
+          <div class="vw-title">Full walkaround · engine start · undercarriage check</div>
+          <div class="vw-hd">HD</div>
         </div>
       </div>
 
@@ -1279,15 +1293,14 @@ function switchTab(id, btn) {
 }
 
 // Inline video embed (stays on page, loads iframe only on click for speed)
-function loadInlineVideo(stripEl, videoId) {
-  const wrap = document.getElementById('inlineVideoWrap');
-  wrap.innerHTML = '<iframe src="https://www.youtube.com/embed/' + videoId +
+function loadInlineVideo(mediaEl, videoId) {
+  mediaEl.innerHTML = '<iframe src="https://www.youtube.com/embed/' + videoId +
     '?autoplay=1&rel=0" title="Inspection Video" frameborder="0" ' +
     'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ' +
-    'allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe>';
-  wrap.style.display = 'block';
-  stripEl.style.display = 'none';
-  wrap.scrollIntoView({behavior:'smooth', block:'nearest'});
+    'allowfullscreen></iframe>';
+  mediaEl.onclick = null;
+  const win = document.getElementById('videoWindow');
+  if (win) win.classList.add('playing');
 }
 
 // Gallery
@@ -1370,7 +1383,7 @@ document.addEventListener('selectstart', function(e){ e.preventDefault(); });
   <div style="max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
     <div style="flex:1;min-width:260px">
       <p style="font-size:13px;font-weight:700;color:#061a2f;margin-bottom:6px;letter-spacing:.03em">🍪 We Value Your Privacy</p>
-      <p style="font-size:12px;color:#667085;line-height:1.6;margin:0">We use cookies to enhance your browsing experience, analyze traffic and improve our services. By clicking "Accept All", you consent to our use of cookies. <a href="contact.html" style="color:#f5b400;text-decoration:underline">Learn more</a></p>
+      <p style="font-size:12px;color:#667085;line-height:1.6;margin:0">We use cookies to enhance your browsing experience, analyze traffic and improve our services. By clicking "Accept All", you consent to our use of cookies. <a href="contact.html" style="color:#f5b400;text-decoration:underline">Learn more about our cookie policy</a></p>
     </div>
     <div style="display:flex;gap:8px;flex-shrink:0;flex-wrap:wrap">
       <button onclick="cookieChoice('reject')" style="padding:9px 20px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:1.5px solid #d9dee7;background:#fff;color:#667085;cursor:pointer;border-radius:5px;font-family:'DM Sans',sans-serif;transition:all .2s">Reject All</button>
