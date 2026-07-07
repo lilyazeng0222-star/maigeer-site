@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><link rel="icon" type="image/webp" href="/images/logo-main.webp">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Used XCMG XS203 Road Roller For Sale | 2024 | 630H | FOB Shanghai | Maigeer Machinery</title>
@@ -18,7 +18,7 @@
 <meta property="og:image" content="https://www.maigeermachinery.com/products/image/XCMG_XS203_(1).webp">
 <meta property="og:site_name" content="Maigeer Machinery">
 <meta property="og:locale" content="en_US">
-<meta property="og:video" content="https://www.youtube.com/watch?v=pjb89rj0TVw">
+<meta property="og:video" content="https://www.youtube.com/watch?v=yFqT5JZ6Zzk">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
@@ -32,7 +32,10 @@
   "@type": "Product",
   "name": "Used XCMG XS203 Road Roller",
   "description": "Used XCMG XS203 road roller for sale. Year 2024, working hours 630H, operating weight 20 ton, engine Shangchai SC8D175.2G2B1, drum width 2.13m. Origin China. Available for export worldwide.",
-  "brand": {"@type": "Brand", "name": "XCMG"},
+  "brand": {
+    "@type": "Brand",
+    "name": "XCMG"
+  },
   "model": "XS203",
   "offers": {
     "@type": "Offer",
@@ -56,15 +59,51 @@
     }
   },
   "additionalProperty": [
-    {"@type": "PropertyValue", "name": "Year", "value": "2024"},
-    {"@type": "PropertyValue", "name": "Working Hours", "value": "630H"},
-    {"@type": "PropertyValue", "name": "Operating Weight", "value": "20 TON"},
-    {"@type": "PropertyValue", "name": "Engine", "value": "Shangchai SC8D175.2G2B1"},
-    {"@type": "PropertyValue", "name": "Drum Width", "value": "2.13 m"},
-    {"@type": "PropertyValue", "name": "Power", "value": "128 kW / 172 HP"},
-    {"@type": "PropertyValue", "name": "Static Linear Load", "value": "470 N/cm"},
-    {"@type": "PropertyValue", "name": "Condition", "value": "Used"},
-    {"@type": "PropertyValue", "name": "Origin", "value": "China"}
+    {
+      "@type": "PropertyValue",
+      "name": "Year",
+      "value": "2024"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Working Hours",
+      "value": "630H"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Operating Weight",
+      "value": "20 TON"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Engine",
+      "value": "Shangchai SC8D175.2G2B1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Drum Width",
+      "value": "2.13 m"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Power",
+      "value": "128 kW / 172 HP"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Static Linear Load",
+      "value": "470 N/cm"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Condition",
+      "value": "Used"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Origin",
+      "value": "China"
+    }
   ]
 }
 </script>
@@ -86,8 +125,10 @@
     "addressCountry": "CN"
   },
   "sameAs": [
-    "https://www.instagram.com/maigeermachinery?igsh=ZWp2eTJsNTRqNXds&utm_source=qr",
-    "https://www.youtube.com/watch?v=pjb89rj0TVw"
+    "https://www.facebook.com/profile.php?id=61567973631757",
+    "https://www.instagram.com/maigeermachinery/",
+    "https://www.youtube.com/@maigeermachinery",
+    "https://www.tiktok.com/@maigeermachinery"
   ]
 }
 </script>
@@ -192,15 +233,33 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
 .thumb img{width:100%;height:100%;object-fit:cover;opacity:.7;transition:opacity .2s}
 .thumb.active img,.thumb:hover img{opacity:1}
 
-/* Video strip */
-.video-strip{background:var(--navy3);padding:14px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:background .2s;margin-top:4px}
-.video-strip:hover{background:#104070}
-.vs-play{width:42px;height:42px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.vs-play svg{width:16px;height:16px;fill:var(--navy);margin-left:2px}
-.vs-text{flex:1}
-.vs-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:2px}
-.vs-title{font-size:14px;font-weight:600;color:#fff}
-.vs-dur{font-size:12px;color:rgba(255,255,255,.35);margin-left:auto;white-space:nowrap}
+/* Video Window — diagnostic viewfinder style */
+.video-window{position:relative;max-width:720px;border-radius:10px;overflow:hidden;background:var(--navy);box-shadow:0 20px 44px rgba(6,26,47,.22)}
+.vw-media{position:relative;width:100%;padding-bottom:56.25%;height:0;overflow:hidden;background:#000;cursor:pointer}
+.vw-media iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vw-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.62) saturate(1.05)}
+.vw-scan{position:absolute;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(245,180,0,.55),transparent);animation:vwScan 3.2s linear infinite;pointer-events:none}
+@keyframes vwScan{0%{top:6%}50%{top:92%}100%{top:6%}}
+.vw-corner{position:absolute;width:26px;height:26px;border-color:var(--gold);opacity:.85;pointer-events:none;z-index:3}
+.vw-corner.tl{top:12px;left:12px;border-top:2px solid var(--gold);border-left:2px solid var(--gold)}
+.vw-corner.tr{top:12px;right:12px;border-top:2px solid var(--gold);border-right:2px solid var(--gold)}
+.vw-corner.bl{bottom:12px;left:12px;border-bottom:2px solid var(--gold);border-left:2px solid var(--gold)}
+.vw-corner.br{bottom:12px;right:12px;border-bottom:2px solid var(--gold);border-right:2px solid var(--gold)}
+.vw-topbar{position:absolute;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:16px 20px;z-index:3;pointer-events:none}
+.vw-rec{display:flex;align-items:center;gap:7px;background:rgba(6,26,47,.55);backdrop-filter:blur(3px);padding:5px 10px 5px 8px;border-radius:20px;font-family:"DM Sans",sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;color:#fff;text-transform:uppercase}
+.vw-dot{width:7px;height:7px;border-radius:50%;background:#ff3b30;box-shadow:0 0 0 0 rgba(255,59,48,.6);animation:vwPulse 1.6s ease-out infinite}
+@keyframes vwPulse{0%{box-shadow:0 0 0 0 rgba(255,59,48,.55)}70%{box-shadow:0 0 0 8px rgba(255,59,48,0)}100%{box-shadow:0 0 0 0 rgba(255,59,48,0)}}
+.vw-duration{background:rgba(6,26,47,.55);backdrop-filter:blur(3px);padding:5px 10px;border-radius:5px;font-family:"DM Sans",sans-serif;font-size:11px;font-weight:600;letter-spacing:.04em;color:#fff}
+.vw-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:74px;height:74px;border-radius:50%;background:var(--gold);border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:3;transition:transform .2s,background .2s}
+.vw-play::before{content:'';position:absolute;inset:-14px;border-radius:50%;border:1.5px solid rgba(245,180,0,.5);animation:vwRing 2.2s ease-out infinite}
+@keyframes vwRing{0%{transform:scale(.85);opacity:1}100%{transform:scale(1.35);opacity:0}}
+.vw-play svg{width:24px;height:24px;fill:var(--navy);margin-left:3px}
+.video-window:hover .vw-play{background:var(--gold2);transform:translate(-50%,-50%) scale(1.06)}
+.vw-bottombar{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding:34px 20px 16px;background:linear-gradient(0deg,rgba(6,26,47,.88) 0%,transparent 100%);z-index:3;pointer-events:none}
+.vw-title{font-family:"DM Sans",sans-serif;font-size:13px;font-weight:600;color:#fff;line-height:1.4;max-width:80%}
+.vw-hd{flex-shrink:0;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);color:#fff;font-family:"DM Sans",sans-serif;font-size:10px;font-weight:700;letter-spacing:.06em;padding:3px 7px;border-radius:4px}
+.video-window.playing .vw-scan,.video-window.playing .vw-play,.video-window.playing .vw-poster{display:none}
+@media(max-width:560px){.vw-title{font-size:11.5px;max-width:70%}.vw-play{width:58px;height:58px}.vw-play svg{width:18px;height:18px}.vw-corner{width:18px;height:18px}}
 
 /* Product Info Panel */
 .ph-info{color:#fff;padding-top:10px;padding-bottom:60px}
@@ -224,10 +283,8 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
 .info-strip-val{font-family:"Bebas Neue",sans-serif;font-size:22px;letter-spacing:.04em;color:#fff;line-height:1;order:0}
 .info-strip-available{display:flex;align-items:center;justify-content:center;gap:7px;color:#25d366 !important}
 .avail-dot{width:7px;height:7px;background:#25d366;border-radius:50%;flex-shrink:0;animation:blink 1.5s infinite}
-/* hide icon — keep layout clean like kspec */
 .info-strip-icon{display:none}
 .info-strip-divider{display:none}
-
 
 /* CTAs */
 .cta-stack{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
@@ -407,28 +464,13 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
 .fl-name{font-family:"Bebas Neue",sans-serif;font-size:18px;letter-spacing:.05em;color:#fff}
 .fl-name span{color:var(--gold)}
 
-
-
-
-
-
-
-
-
-
-.footer-prod-col 
 .footer-bot-full{padding-top:40px;border-top:1px solid rgba(255,255,255,.07);margin-top:0}
 
-
-
-
-
-
-
-.fbot-columns{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px}.fcat-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}.fcat-col a{font-size:12px;color:rgba(255,255,255,.5);transition:color .2s}.fcat-col a:hover{color:var(--gold)}
+.fbot-columns{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px}
+.fcat-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.fcat-col a{font-size:12px;color:rgba(255,255,255,.5);transition:color .2s}
+.fcat-col a:hover{color:var(--gold)}
 .fbot-contact-title{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#fff;margin-bottom:18px}
-
-
 
 .fbot-soc-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .fsoc-big{display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:8px;color:rgba(255,255,255,.5);font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;transition:all .2s;text-align:center}
@@ -453,16 +495,11 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
 
 /* ── FOOTER RESPONSIVE ── */
 @media(max-width:1024px){
-  
   .footer-cta{padding:32px}
-  
   .fbot-columns{grid-template-columns:1fr 1fr;gap:32px}
   .fbot-soc-grid{grid-template-columns:repeat(4,1fr)}
 }
 @media(max-width:640px){
-  
-  
-  
   .fbot-columns{grid-template-columns:1fr}
   .fbot-soc-grid{grid-template-columns:repeat(4,1fr)}
   .footer-cta{flex-direction:column;align-items:flex-start}
@@ -559,28 +596,17 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
       <!-- Gallery -->
       <div class="ph-gallery">
         <div class="gallery-main" id="mainImg">
-          <img src="image/XCMG_XS203_(1).webp" alt="XCMG XS203 main" id="mainImgEl">
+          <img src="image/XCMG_XS203_(1).webp" alt="XCMG XS203 Road Roller main" id="mainImgEl">
           <div class="gallery-badge">HOT SELL</div>
           <div class="gallery-status">Available Now</div>
         </div>
         <div class="gallery-thumbs">
-          <div class="thumb active" onclick="switchImg(this,'image/XCMG_XS203_(1).webp')"><img src="image/XCMG_XS203_(1).webp" alt="thumb1"></div>
-          <div class="thumb" onclick="switchImg(this,'image/XCMG_XS203_(2).webp')"><img src="image/XCMG_XS203_(2).webp" alt="thumb2"></div>
-          <div class="thumb" onclick="switchImg(this,'image/XCMG_XS203_(3).webp')"><img src="image/XCMG_XS203_(3).webp" alt="thumb3"></div>
-          <div class="thumb" onclick="switchImg(this,'image/XCMG_XS203_(4).webp')"><img src="image/XCMG_XS203_(4).webp" alt="thumb4"></div>
-          <div class="thumb" onclick="switchImg(this,'image/XCMG_XS203_(5).webp')"><img src="image/XCMG_XS203_(5).webp" alt="thumb5"></div>
+          <div class="thumb active" onclick="switchImg(this,'image/XCMG_XS203_(1).webp')"><img src="image/XCMG_XS203_(1).webp" alt="XCMG XS203 thumb1"></div>
+          <div class="thumb" onclick="switchImg(this,'image/XCMG_XS203_(2).webp')"><img src="image/XCMG_XS203_(2).webp" alt="XCMG XS203 thumb2"></div>
+          <div class="thumb" onclick="switchImg(this,'image/XCMG_XS203_(3).webp')"><img src="image/XCMG_XS203_(3).webp" alt="XCMG XS203 thumb3"></div>
+          <div class="thumb" onclick="switchImg(this,'image/XCMG_XS203_(4).webp')"><img src="image/XCMG_XS203_(4).webp" alt="XCMG XS203 thumb4"></div>
+          <div class="thumb" onclick="switchImg(this,'image/XCMG_XS203_(5).webp')"><img src="image/XCMG_XS203_(5).webp" alt="XCMG XS203 thumb5"></div>
         </div>
-        <!-- Video Strip -->
-        <a class="video-strip" href="https://www.youtube.com/watch?v=pjb89rj0TVw" target="_blank" rel="noopener" style="text-decoration:none">
-          <div class="vs-play">
-            <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
-          </div>
-          <div class="vs-text">
-            <div class="vs-label">Inspection Video</div>
-            <div class="vs-title">Full walkaround · engine start · drum & tires check</div>
-          </div>
-          <div class="vs-dur">4:32</div>
-        </a>
       </div>
 
       <!-- Info Panel -->
@@ -608,7 +634,7 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
           </div>
         </div>
 
-        <!-- Info Strip: Drum / Engine / Status -->
+        <!-- Info Strip: Bucket / Engine / Status -->
         <div class="info-strip">
           <div class="info-strip-item">
             <div class="info-strip-val">2.13 m</div>
@@ -705,6 +731,34 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
           <div class="spec-row"><span class="spec-key" data-i18n="sk_type">Type</span><span class="spec-val" data-i18n="sv_type">Road Roller</span></div>
           <div class="spec-row"><span class="spec-key" data-i18n="sk_origin">Origin</span><span class="spec-val" data-i18n="sv_origin">China</span></div>
           <div class="spec-row"><span class="spec-key" data-i18n="sk_delivery">Delivery Time</span><span class="spec-val" data-i18n="sv_delivery">3–5 Days</span></div>
+        </div>
+      </div>
+
+      <!-- Inspection Video (below specs table) -->
+      <div style="margin-bottom:16px">
+        <div class="sec-tag" data-i18n="video_tag">Testing Video</div>
+        <h2 class="sec-h video-section-title" data-i18n="dp_video_title">Used XCMG XS203 Road Roller Testing Video</h2>
+      </div>
+
+      <div class="video-window" id="videoWindow">
+        <div class="vw-media" id="vwMedia" onclick="loadInlineVideo(this,'yFqT5JZ6Zzk')">
+          <img class="vw-poster" src="https://img.youtube.com/vi/yFqT5JZ6Zzk/maxresdefault.jpg" alt="XCMG XS203 Road Roller inspection video preview">
+          <div class="vw-scan"></div>
+          <button class="vw-play" aria-label="Play inspection video">
+            <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+          </button>
+        </div>
+        <div class="vw-corner tl"></div>
+        <div class="vw-corner tr"></div>
+        <div class="vw-corner bl"></div>
+        <div class="vw-corner br"></div>
+        <div class="vw-topbar">
+          <div class="vw-rec"><span class="vw-dot"></span>Inspection Footage</div>
+          <div class="vw-duration">04:32</div>
+        </div>
+        <div class="vw-bottombar">
+          <div class="vw-title">Full walkaround · engine start · working condition check</div>
+          <div class="vw-hd">HD</div>
         </div>
       </div>
 
@@ -826,7 +880,7 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
             </div>
           </div>
           <div class="ship-note" data-i18n="ship_note">
-            <strong>Lead time:</strong> Machine is ready for loading. Typical transit time is 15–30 days depending on destination port. We handle all customs export documents from China including CO, packing list, and commercial invoice.
+            <strong>Lead time:</strong> Machine is ready for loading. Typical transit time is 20–40 days by sea. We handle all customs export documents from China including CO, packing list, and commercial invoice.
           </div>
         </div>
         <div>
@@ -854,13 +908,11 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
 <section class="related-section">
   <div class="wrap">
     <div class="sec-tag" data-i18n="dp_related_tag">More Units Available</div>
-    <h2 class="sec-h" data-i18n="dp_related">Similar Wheel Loaders</h2>
+    <h2 class="sec-h" data-i18n="dp_related">Similar Road Rollers</h2>
     <div class="related-grid">
-
-      <!-- Card 1: DYNAPAC CA301D -->
       <a class="pcard" href="dynapac-ca301d-detail.html">
         <div class="pcard-img">
-          <img src="image/DYNAPAC_CA301D_(1).webp" alt="DYNAPAC CA301D" onerror="this.style.display='none'">
+          <img src="../products/image/DYNAPAC_CA301D_(1).webp" alt="DYNAPAC CA301D" onerror="this.style.display='none'">
           <div class="pcard-badge">ROAD ROLLER</div>
           <div class="pcard-status">In Stock</div>
         </div>
@@ -875,10 +927,9 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
         </div>
       </a>
 
-      <!-- Card 2: XCMG XS223 -->
       <a class="pcard" href="xcmg-xs223-detail.html">
         <div class="pcard-img">
-          <img src="image/XCMG_XS223_(1).webp" alt="XCMG XS223" onerror="this.style.display='none'">
+          <img src="../products/image/XCMG_XS223_(1).webp" alt="XCMG XS223" onerror="this.style.display='none'">
           <div class="pcard-badge">ROAD ROLLER</div>
           <div class="pcard-status">In Stock</div>
         </div>
@@ -893,10 +944,9 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
         </div>
       </a>
 
-      <!-- Card 3: XCMG XS183 -->
       <a class="pcard" href="xcmg-xs183-detail.html">
         <div class="pcard-img">
-          <img src="image/XCMG_XS183_(1).webp" alt="XCMG XS183" onerror="this.style.display='none'">
+          <img src="../products/image/XCMG_XS183_(1).webp" alt="XCMG XS183" onerror="this.style.display='none'">
           <div class="pcard-badge">ROAD ROLLER</div>
           <div class="pcard-status">In Stock</div>
         </div>
@@ -911,10 +961,9 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
         </div>
       </a>
 
-      <!-- Card 4: XCMG XS143 -->
       <a class="pcard" href="xcmg-xs143-detail.html">
         <div class="pcard-img">
-          <img src="image/XCMG_XS143_(1).webp" alt="XCMG XS143" onerror="this.style.display='none'">
+          <img src="../products/image/XCMG_XS143_(1).webp" alt="XCMG XS143" onerror="this.style.display='none'">
           <div class="pcard-badge">ROAD ROLLER</div>
           <div class="pcard-status">In Stock</div>
         </div>
@@ -928,7 +977,6 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
           <div class="pcard-cta">View Details →</div>
         </div>
       </a>
-
     </div>
   </div>
 </section>
@@ -1062,7 +1110,7 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
     </div>
     <div class="modal-body">
       <div class="form-pre">
-        Inquiring about: <strong>XCMG XS203 Road Roller</strong>
+        Inquiring about: <strong>XCMG XS203</strong>
       </div>
       <div class="form-row">
         <div class="form-group">
@@ -1086,7 +1134,7 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
       </div>
       <div class="form-group">
         <label>Destination Port</label>
-        <input type="text" placeholder="e.g. Lagos, Mombasa, Santos...">
+        <input type="text" placeholder="e.g. Lagos, Mombasa, Dubai...">
       </div>
       <div class="form-group">
         <label>Message / Questions</label>
@@ -1107,52 +1155,123 @@ function toggleMenu(){document.getElementById('mobMenu').classList.toggle('on')}
 
 // ── FULL TRANSLATION SYSTEM (ported from index.html) ──
 const TRANSLATIONS = {
-  en: {
-    nav_home:"Home",nav_products:"Products",nav_about:"About Us",nav_shipping:"Shipping",nav_blog:"Blog",nav_contact:"Contact",nav_wa:"WHATSAPP",
-    ft_products:"Products",ft_nav:"Navigation",ft_contact:"Contact",
-    ft_items:['Excavator','Bulldozer','Road Roller','Dump Truck','Semi Trailer','Skid Steer Loader','Fuel Tanker Truck','Trailer Head','Wheel Loader','Motor Grader','Backhoe Loader','Truck Crane','Forklift','Truck-Mounted Crane','Sprinkler Truck','Concrete Mixer'],
-    fct_h:"Ready to Buy? Get a Quote Today.",fct_p:"Tell us what machine you need and where you want to ship it. We'll reply within 24 hours with real photos, video, and honest pricing.",fct_btn:"Get a Free Quote →",
-    ft_copyright:"© 2025 Shanghai Maigeer Machinery Co., Ltd. All rights reserved.",
-    // Detail page UI
-    dp_tag:"Used Road Roller · In Stock",dp_subtitle:"Road Roller · Year 2024",
-    dp_tab1:"Specifications",dp_tab2:"Condition Report",dp_tab3:"Shipping & Logistics",
-    dp_spec_title:"Full Specifications",dp_cond_title:"Condition Report",dp_ship_title:"Shipping & Logistics",
-    dp_video_title:"Used XCMG XS203 Road Roller Testing Video",
-    dp_inq_title:"Send Inquiry",dp_inq_btn:"Submit Inquiry",
-    dp_wa_btn:"Chat on WhatsApp",dp_req_btn:"Send Inquiry / Get Best Price",
-    dp_related:"Similar Road Rollers",dp_related_tag:"More Units Available",
-    // Trust badges
-    trust1:"Real Video Inspection",trust2:"Global Shipping",trust3:"L/C & T/T Accepted",trust4:"10+ Years Export",
-    // Specs tab
-    spec_tag:"Technical Data",spec_h:"Full Specifications",
-    sg_basic:"Basic Information",sg_detail:"Details & Logistics",
-    sk_model:"Model",sk_engine:"Engine Model",sk_weight:"Operating Weight",sk_bucket:"Drum Width",sk_power:"Power",sk_year:"Year",sk_hours:"Working Hours",
-    sk_spec:"Dimensions (L×W×H)",sk_color:"Color",sk_warranty:"Warranty",sk_condition:"Condition",sk_type:"Type",sk_origin:"Origin",sk_delivery:"Delivery Time",
-    sv_color:"Yellow",sv_warranty:"12 Months Warranty",sv_condition:"Used",sv_type:"Road Roller",sv_origin:"China",sv_delivery:"3–5 Days",
-    video_tag:"Testing Video",
-    // Condition tab
-    cond_tag:"Pre-Sale Assessment",
-    cl_hours:"Working Hours",cd_hours:"Verified via ECM hour meter reading",
-    cl_engine:"Engine Condition",cv_good:"GOOD",cd_engine:"Shangchai engine starts cleanly, no smoke, oil level normal",
-    cl_under:"Tires & Steering",cd_under:"Tires 90% tread remaining, articulation joint and tie rods tight",
-    cl_hyd:"Hydraulics",cv_vgood:"VERY GOOD",cd_hyd:"No leaks, vibration and steering cylinders fully operational",
-    cl_cab:"Cab & Controls",cv_fair:"FAIR",cd_cab:"ROPS cab intact, levers and pedals responsive, AC functional, interior brand new",
-    cl_struct:"Drum & Frame",cd_struct:"No cracks on main frame or articulation joint, drum shell smooth with no dents, scraper bars properly adjusted",
-    checklist_h:"Inspection Checklist",
-    ic1:"Engine starts and runs normally",ic2:"All hydraulic functions operate correctly",
-    ic3:"Travel drive — steering and articulation responsive, no excessive play",ic4:"Vibration system engages and disengages smoothly, no unusual noise",
-    ic5:"Vibration system hydraulics — no leaks detected",ic6:"Tires, rims and wheel bearings in good condition",
-    ic7:"Drum scraper bars and edges in excellent condition",ic8:"All electrical instruments and warning lights functional",
-    ic9:"No structural cracks on main frame or articulation joint",ic10:"Cab interior brand new — no wear",
-    ic11:"Engine oil & coolant levels normal",ic12:"Hydraulic oil level and filter checked",
-    cond_note:"✔ Full video inspection available. WhatsApp us to receive the walkaround video before purchase. Third-party inspection by SGS or Bureau Veritas can be arranged at buyer's cost.",
-    // Shipping tab
-    ship_tag:"Delivery Options",
-    exw_name:"EXW (Ex Works)",exw_desc:"Buyer collects from our warehouse in Shanghai. Lowest base price.",
-    fob_name:"FOB Shanghai",fob_desc:"Machine loaded onto vessel, port of Shanghai. Buyer arranges freight.",
-    cif_name:"CIF (Cost, Insurance & Freight)",cif_desc:"We arrange freight + marine insurance to your destination port.",
-    ship_note:"<strong>Lead time:</strong> Machine is ready for loading. Typical transit time is 20–40 days by sea. We handle all customs export documents from China including CO, packing list, and commercial invoice.",
-    transit_sea:"Days Sea Shipping",transit_prep:"Days Delivery Prep"
+  "en": {
+    "nav_home": "Home",
+    "nav_products": "Products",
+    "nav_about": "About Us",
+    "nav_shipping": "Shipping",
+    "nav_blog": "Blog",
+    "nav_contact": "Contact",
+    "nav_wa": "WHATSAPP",
+    "ft_products": "Products",
+    "ft_nav": "Navigation",
+    "ft_contact": "Contact",
+    "ft_items": [
+      "Excavator",
+      "Bulldozer",
+      "Road Roller",
+      "Dump Truck",
+      "Semi Trailer",
+      "Skid Steer Loader",
+      "Fuel Tanker Truck",
+      "Trailer Head",
+      "Wheel Loader",
+      "Motor Grader",
+      "Backhoe Loader",
+      "Truck Crane",
+      "Forklift",
+      "Truck-Mounted Crane",
+      "Sprinkler Truck",
+      "Concrete Mixer"
+    ],
+    "fct_h": "Ready to Buy? Get a Quote Today.",
+    "fct_p": "Tell us what machine you need and where you want to ship it. We'll reply within 24 hours with real photos, video, and honest pricing.",
+    "fct_btn": "Get a Free Quote →",
+    "ft_copyright": "© 2025 Shanghai Maigeer Machinery Co., Ltd. All rights reserved.",
+    "dp_tag": "Used Road Roller · In Stock",
+    "dp_subtitle": "Road Roller · Year 2024",
+    "dp_tab1": "Specifications",
+    "dp_tab2": "Condition Report",
+    "dp_tab3": "Shipping & Logistics",
+    "dp_spec_title": "Full Specifications",
+    "dp_cond_title": "Condition Report",
+    "dp_ship_title": "Shipping & Logistics",
+    "dp_video_title": "Used XCMG XS203 Road Roller Testing Video",
+    "dp_inq_title": "Send Inquiry",
+    "dp_inq_btn": "Submit Inquiry",
+    "dp_wa_btn": "Chat on WhatsApp",
+    "dp_req_btn": "Send Inquiry / Get Best Price",
+    "dp_related": "Similar Road Rollers",
+    "dp_related_tag": "More Units Available",
+    "trust1": "Real Video Inspection",
+    "trust2": "Global Shipping",
+    "trust3": "L/C & T/T Accepted",
+    "trust4": "10+ Years Export",
+    "spec_tag": "Technical Data",
+    "spec_h": "Full Specifications",
+    "sg_basic": "Basic Information",
+    "sg_detail": "Details & Logistics",
+    "sk_model": "Model",
+    "sk_engine": "Engine Model",
+    "sk_weight": "Operating Weight",
+    "sk_bucket": "Drum Width",
+    "sk_power": "Power",
+    "sk_year": "Year",
+    "sk_hours": "Working Hours",
+    "sk_spec": "Dimensions (L×W×H)",
+    "sk_color": "Color",
+    "sk_warranty": "Warranty",
+    "sk_condition": "Condition",
+    "sk_type": "Type",
+    "sk_origin": "Origin",
+    "sk_delivery": "Delivery Time",
+    "sv_color": "Yellow",
+    "sv_warranty": "12 Months Warranty",
+    "sv_condition": "Used",
+    "sv_type": "Road Roller",
+    "sv_origin": "China",
+    "sv_delivery": "3–5 Days",
+    "video_tag": "Testing Video",
+    "cond_tag": "Pre-Sale Assessment",
+    "cl_hours": "Working Hours",
+    "cd_hours": "Verified via ECM hour meter reading",
+    "cl_engine": "Engine Condition",
+    "cv_good": "GOOD",
+    "cd_engine": "Shangchai engine starts cleanly, no smoke, oil level normal",
+    "cl_under": "Tires & Steering",
+    "cd_under": "Tires 90% tread remaining, articulation joint and tie rods tight",
+    "cl_hyd": "Hydraulics",
+    "cv_vgood": "VERY GOOD",
+    "cd_hyd": "No leaks, vibration and steering cylinders fully operational",
+    "cl_cab": "Cab & Controls",
+    "cv_fair": "FAIR",
+    "cd_cab": "ROPS cab intact, levers and pedals responsive, AC functional, interior brand new",
+    "cl_struct": "Drum & Frame",
+    "cd_struct": "No cracks on main frame or articulation joint, drum shell smooth with no dents, scraper bars properly adjusted",
+    "checklist_h": "Inspection Checklist",
+    "ic1": "Engine starts and runs normally",
+    "ic2": "All hydraulic functions operate correctly",
+    "ic3": "Travel drive — steering and articulation responsive, no excessive play",
+    "ic4": "Vibration system engages and disengages smoothly, no unusual noise",
+    "ic5": "Vibration system hydraulics — no leaks detected",
+    "ic6": "Tires, rims and wheel bearings in good condition",
+    "ic7": "Drum scraper bars and edges in excellent condition",
+    "ic8": "All electrical instruments and warning lights functional",
+    "ic9": "No structural cracks on main frame or articulation joint",
+    "ic10": "Cab interior brand new — no wear",
+    "ic11": "Engine oil & coolant levels normal",
+    "ic12": "Hydraulic oil level and filter checked",
+    "cond_note": "✔ Full video inspection available. WhatsApp us to receive the walkaround video before purchase. Third-party inspection by SGS or Bureau Veritas can be arranged at buyer's cost.",
+    "ship_tag": "Delivery Options",
+    "exw_name": "EXW (Ex Works)",
+    "exw_desc": "Buyer collects from our warehouse in Shanghai. Lowest base price.",
+    "fob_name": "FOB Shanghai",
+    "fob_desc": "Machine loaded onto vessel, port of Shanghai. Buyer arranges freight.",
+    "cif_name": "CIF (Cost, Insurance & Freight)",
+    "cif_desc": "We arrange freight + marine insurance to your destination port.",
+    "ship_note": "<strong>Lead time:</strong> Machine is ready for loading. Typical transit time is 20–40 days by sea. We handle all customs export documents from China including CO, packing list, and commercial invoice.",
+    "transit_sea": "Days Sea Shipping",
+    "transit_prep": "Days Delivery Prep"
   }
 };
 
@@ -1278,19 +1397,23 @@ document.addEventListener('click', function(e) {
   }
 });
 
-// Auto-restore saved language
-(function(){
-  localStorage.setItem('maigeer_lang','en');
-})();
-
-
-
-
 function switchTab(id, btn) {
   document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.getElementById('tab-' + id).classList.add('active');
   btn.classList.add('active');
+}
+
+
+// Inline video embed (stays on page, loads iframe only on click for speed)
+function loadInlineVideo(mediaEl, videoId) {
+  mediaEl.innerHTML = '<iframe src="https://www.youtube.com/embed/' + videoId +
+    '?autoplay=1&rel=0" title="Inspection Video" frameborder="0" ' +
+    'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ' +
+    'allowfullscreen></iframe>';
+  mediaEl.onclick = null;
+  const win = document.getElementById('videoWindow');
+  if (win) win.classList.add('playing');
 }
 
 // Gallery
@@ -1335,7 +1458,7 @@ function downloadSpec() {
 // Share
 function shareProduct() {
   if (navigator.share) {
-    navigator.share({ title: 'XCMG XS203 Used Road Roller', url: window.location.href });
+    navigator.share({ title: 'XCMG XS203 Used Road Rollers', url: window.location.href });
   } else {
     navigator.clipboard.writeText(window.location.href).then(() => alert('Link copied to clipboard!'));
   }
