@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <!-- JSON-LD: WebPage -->
 <script type="application/ld+json">
 {
@@ -64,7 +63,7 @@
 }
 </script>
 
-<head>
+<head><link rel="icon" type="image/webp" href="/images/logo-main.webp">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Used Dump Trucks for Sale from China | Sourced on Request | MAIGEER MACHINERY</title>
@@ -99,7 +98,6 @@
   gtag("js", new Date());
   gtag("config", "G-2BWHXTR004");
 </script>
-
 <style>
 :root{
   --navy:#061a2f;
@@ -703,20 +701,21 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 
 <!-- PRODUCT DATA + RENDER -->
 <script>
-const DUMPTRUCKS = [];
+const DUMP_TRUCKS = [];
 
 function renderGrid() {
   const grid = document.getElementById("prodGrid");
   const empty = document.getElementById("emptyMsg");
   const count = document.getElementById("prodCount");
-  count.textContent = DUMPTRUCKS.length;
-  if (DUMPTRUCKS.length === 0) {
+  const list = DUMP_TRUCKS;
+  count.textContent = list.length;
+  if (list.length === 0) {
     grid.innerHTML = "";
     empty.style.display = "block";
     return;
   }
   empty.style.display = "none";
-  grid.innerHTML = DUMPTRUCKS.map(m => `
+  grid.innerHTML = list.map(m => `
     <div class="pcard" style="position:relative"><a class="pcard-main" href="${m.detail}" aria-label="${m.name} details" style="position:absolute;inset:0;z-index:1"></a>
       <div class="pcard-img">
         <img src="${m.img}" alt="${m.name} used dump truck for sale China" loading="lazy" onerror="this.style.display='none'">

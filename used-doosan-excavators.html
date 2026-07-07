@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <!-- JSON-LD: WebPage -->
 <script type="application/ld+json">
 {
@@ -84,7 +83,7 @@
 }
 </script>
 
-<head>
+<head><link rel="icon" type="image/webp" href="/images/logo-main.webp">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Used Doosan Excavators for Sale from China | DX Series | MAIGEER MACHINERY</title>
@@ -119,7 +118,6 @@
   gtag("js", new Date());
   gtag("config", "G-2BWHXTR004");
 </script>
-
 <style>
 :root{
   --navy:#061a2f;
@@ -758,9 +756,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 
 <!-- PRODUCT DATA + RENDER -->
 <script>
-const EXCAVATORS = [
-  { id:"doosan-dx225lca", brand:"DOOSAN", brandFull:"Doosan", name:"Doosan DX225LCA", img:"products/image/DOOSAN_DX225LCA_(1).webp", specs:[["Year","2024"],["Hours","483H"],["Weight","22.5 T"]], detail:"products/doosan-dx225lca-detail.html", wa:"https://wa.me/8615382453746?text=Hi%2C+I%27m+interested+in+Doosan+DX225LCA.+Please+send+details." }
-];
+const EXCAVATORS = [{"id":"doosan-dx225lca","brand":"DOOSAN","brandFull":"Doosan","name":"Doosan DX225LCA","img":"products/image/DOOSAN_DX225LCA_(1).webp","specs":[["Year","2024"],["Hours","483H"],["Weight","22.5 T"]],"detail":"products/doosan-dx225lca-detail.html","wa":"https://wa.me/8615382453746?text=Hi%2C+I'm+interested+in+Doosan+DX225LCA+(ID%3A+MG-EX-DX225LCA-001).+Please+send+more+details."}];
 
 function renderGrid() {
   const grid = document.getElementById("prodGrid");
@@ -768,7 +764,12 @@ function renderGrid() {
   const count = document.getElementById("prodCount");
   const list = EXCAVATORS;
   count.textContent = list.length;
-  empty.style.display = list.length === 0 ? "block" : "none";
+  if (list.length === 0) {
+    grid.innerHTML = "";
+    empty.style.display = "block";
+    return;
+  }
+  empty.style.display = "none";
   grid.innerHTML = list.map(m => `
     <div class="pcard" style="position:relative"><a class="pcard-main" href="${m.detail}" aria-label="${m.name} details" style="position:absolute;inset:0;z-index:1"></a>
       <div class="pcard-img">
@@ -793,6 +794,7 @@ function renderGrid() {
 
 renderGrid();
 </script>
+
 
 <!-- COOKIE BANNER -->
 <div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#fff;border-top:3px solid #f5b400;box-shadow:0 -4px 24px rgba(0,0,0,.13);padding:20px 24px;font-family:'DM Sans',sans-serif">
