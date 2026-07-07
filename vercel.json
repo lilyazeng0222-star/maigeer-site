@@ -3,6 +3,10 @@
     {
       "source": "/favicon.ico",
       "destination": "/images/logo-main.webp"
+    },
+    {
+      "source": "/Sitemap.xml",
+      "destination": "/sitemap.xml"
     }
   ],
   "headers": [
