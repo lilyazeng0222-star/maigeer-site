@@ -224,7 +224,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 .featured-card:hover .fc-read{background:var(--gold2)}
 .fc-read span{transition:transform .2s}
 .featured-card:hover .fc-read span{transform:translateX(4px)}
-.coming-soon-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.coming-soon-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 .cs-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;box-shadow:var(--shadow);display:flex;gap:16px;align-items:flex-start;opacity:.75}
 .cs-icon{font-size:28px;flex-shrink:0;margin-top:2px}
 .cs-tag{display:inline-block;background:rgba(102,112,133,.1);color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:4px;margin-bottom:8px}
@@ -243,7 +243,8 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 .read-btn{display:inline-flex;align-items:center;gap:7px;background:var(--gold);color:var(--navy);font-family:"Bebas Neue",sans-serif;font-size:14px;letter-spacing:.08em;text-transform:uppercase;padding:10px 18px;border-radius:6px;transition:background .2s}
 .read-btn:hover{background:var(--gold2)}
 .post-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.post-card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);transition:all .25s}
+.post-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:28px}
+.post-card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);transition:all .25s;text-decoration:none;color:inherit;display:block}
 .post-card:hover{transform:translateY(-3px);border-color:rgba(245,180,0,.4)}
 .pc-photo{height:180px;background:#e8ecf0;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .pc-photo img{width:100%;height:100%;object-fit:cover;filter:brightness(.85);transition:transform .5s}
@@ -268,7 +269,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 .sb-cta h3{color:#fff}
 .sb-cta p{color:rgba(255,255,255,.7);font-size:13px;margin-bottom:14px;line-height:1.6}
 @media(max-width:960px){.blog-layout{grid-template-columns:1fr}.featured{grid-template-columns:1fr}.fp-photo{min-height:200px}.blog-section{padding:52px 0}}
-@media(max-width:560px){.post-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.post-grid{grid-template-columns:1fr}.coming-soon-grid{grid-template-columns:1fr}}
 
 /* ── LANGUAGE SWITCHER ── */
 .lang-switcher{display:flex;gap:4px;align-items:center}
@@ -386,7 +387,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
         <p class="blog-sub">Real machine export records and practical guides for global buyers. Updated regularly as new cases complete.</p>
       </div>
       <div class="blog-stats">
-        <div class="bstat"><div class="bstat-num">1</div><div class="bstat-label">Published</div></div>
+        <div class="bstat"><div class="bstat-num">2</div><div class="bstat-label">Published</div></div>
         <div class="bstat"><div class="bstat-num">30+</div><div class="bstat-label">Countries Shipped</div></div>
         <div class="bstat"><div class="bstat-num">500+</div><div class="bstat-label">Machines Exported</div></div>
       </div>
@@ -420,16 +421,22 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
       </div>
     </a>
 
+    <!-- 常规文章列表 -->
+    <div class="post-grid">
+      <a href="blog/how-to-choose-used-excavator-china.html" class="post-card">
+        <div class="pc-photo">
+          <img src="/images/machine-inspection.webp" alt="Pre-shipment inspection of a used excavator" loading="lazy">
+        </div>
+        <div class="pc-body">
+          <span class="post-tag">Buying Guide</span>
+          <h3>How to Choose a Used Excavator from China</h3>
+          <p>A complete buyer's guide covering inspection checklist, working hours verification, engine condition and video proof before you pay.</p>
+        </div>
+      </a>
+    </div>
+
     <!-- 即将发布提示 -->
     <div class="coming-soon-grid">
-      <div class="cs-card">
-        <div class="cs-icon">✍️</div>
-        <div class="cs-content">
-          <div class="cs-tag">Coming Soon</div>
-          <div class="cs-title">How to Choose a Used Excavator from China</div>
-          <div class="cs-desc">A complete buyer's guide covering inspection checklist, working hours, engine condition and video verification.</div>
-        </div>
-      </div>
       <div class="cs-card">
         <div class="cs-icon">✍️</div>
         <div class="cs-content">
