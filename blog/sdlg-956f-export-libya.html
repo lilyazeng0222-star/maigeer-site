@@ -110,6 +110,14 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 .case-item{background:var(--light);border-radius:8px;padding:14px 18px}
 .case-item .label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
 .case-item .value{font-size:15px;font-weight:700;color:var(--navy)}
+.fc-info-table{border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:20px 0 28px}
+.fit-row{display:grid;grid-template-columns:1.2fr 1fr 1fr;border-bottom:1px solid var(--line)}
+.fit-row:last-child{border-bottom:none}
+.fit-row div{padding:12px 16px;font-size:13px;color:#374151}
+.fit-row div:first-child{font-weight:700;color:var(--navy);background:var(--light)}
+.fit-head{background:var(--navy)}
+.fit-head div{color:#fff;font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+.fit-head div:first-child{background:var(--navy2)}
 .article-sidebar{display:grid;gap:20px;position:sticky;top:88px}
 .sb-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px;box-shadow:var(--shadow)}
 .sb-card h4{font-family:"Bebas Neue",sans-serif;font-size:20px;color:var(--navy);letter-spacing:.03em;margin-bottom:12px}
@@ -171,7 +179,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 @keyframes wap{0%,100%{box-shadow:0 4px 18px rgba(37,211,102,.4)}50%{box-shadow:0 4px 26px rgba(37,211,102,.6),0 0 0 7px rgba(37,211,102,.07)}}
 @media(max-width:960px){.menu,.nav-wa{display:none}.burger{display:flex}.article-layout{grid-template-columns:1fr}.article-sidebar{position:static}.fbot-contact-bar{grid-template-columns:1fr 1fr}.fbot-columns{grid-template-columns:1fr}}
 @media(max-width:700px){.photo-grid-4{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.case-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.footer-cta{padding:32px;flex-direction:column}.fbot-soc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.case-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.footer-cta{padding:32px;flex-direction:column}.fbot-soc-grid{grid-template-columns:repeat(2,1fr)}.fit-row div{padding:9px 8px;font-size:11px}}
 </style>
 </head>
 <body>
@@ -234,6 +242,9 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
       </div>
 
       <h2>Project Overview</h2>
+      <div class="highlight-box">
+        <p><strong>Executive Summary:</strong> A contractor in Libya needed a reliable wheel loader for construction work, but wanted to avoid the high upfront cost of a CAT or Komatsu machine. MAIGEER Machinery sourced and inspected a used <strong>SDLG 956F</strong> — a wheel loader built on Volvo technology — and shipped it via 40-foot container from Shanghai to Libya, backed by a full pre-shipment video inspection.</p>
+      </div>
       <p>This is a real export case from MAIGEER Machinery. A buyer from Libya contacted us looking for a reliable used wheel loader for construction work. After reviewing several options, the client selected a <strong>used SDLG 956F wheel loader</strong>, which was shipped from Shanghai port to Libya via container.</p>
       <div class="case-grid">
         <div class="case-item"><div class="label">Machine</div><div class="value">SDLG 956F Wheel Loader</div></div>
@@ -242,8 +253,8 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
         <div class="case-item"><div class="label">Port of Loading</div><div class="value">Shanghai, China</div></div>
       </div>
 
-      <h2>Why the Client Chose SDLG 956F</h2>
-      <p>The SDLG 956F is one of the most popular used wheel loaders for buyers in Africa and the Middle East. Here is why so many buyers choose it:</p>
+      <h2>The Budget Challenge: Why SDLG 956F Beat CAT and Komatsu Options</h2>
+      <p>Like most contractors in Africa and the Middle East, our client faced a common dilemma: he needed a machine reliable enough for daily construction work, but a used CAT or Komatsu wheel loader would have stretched his budget well beyond what the project could justify. The SDLG 956F solved this trade-off directly:</p>
       <ul>
         <li><strong>Volvo-backed brand</strong> — SDLG is developed with Volvo technology, giving buyers confidence in quality</li>
         <li><strong>3.0 m³ bucket capacity</strong> — ideal for loading sand, gravel, aggregate and construction materials</li>
@@ -251,6 +262,13 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
         <li><strong>Strong resale value</strong> — high demand in the used market means good resale price</li>
         <li><strong>Competitive price</strong> — significantly more affordable than equivalent CAT or Komatsu models</li>
       </ul>
+      <div class="fc-info-table">
+        <div class="fit-row fit-head"><div>Factor</div><div>SDLG 956F</div><div>Typical CAT / Komatsu Equivalent</div></div>
+        <div class="fit-row"><div>Upfront price</div><div>Budget-friendly</div><div>Significantly higher</div></div>
+        <div class="fit-row"><div>Parts availability in Africa / Middle East</div><div>Wide, easy to source</div><div>Often limited, longer lead times</div></div>
+        <div class="fit-row"><div>Core technology</div><div>Volvo-developed drivetrain</div><div>Proprietary Western drivetrain</div></div>
+        <div class="fit-row"><div>Used-market resale demand</div><div>Strong</div><div>Strong</div></div>
+      </div>
 
       <h2>Our Inspection Process</h2>
       <p>Before confirming the sale, we carried out a full pre-shipment inspection and sent a detailed report plus working video to the client for approval:</p>
