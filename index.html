@@ -280,7 +280,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 .sec-tag{display:inline-flex;align-items:center;gap:9px;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:10px;font-family:"DM Sans",sans-serif}
 .sec-tag::before{content:"";width:22px;height:1px;background:var(--gold)}
 .sec-h{font-size:clamp(34px,3.8vw,50px);line-height:.92;text-transform:uppercase;color:var(--navy);margin-bottom:14px;letter-spacing:.02em}
-.sec-h .g{color:var(--gold)}
+.sec-h .g{color:var(--gold-dark)}
 .sec-sub{font-size:15px;color:var(--muted);line-height:1.7;max-width:540px}
 .sec-center{text-align:center}
 .sec-center .sec-sub{margin:0 auto}
@@ -350,6 +350,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 
 /* ── PROCESS SECTION ── */
 #process{padding:112px 0;background:var(--navy)}
+#process .sec-h .g{color:var(--gold)}
 #process .sec-tag{color:var(--gold)}
 #process .sec-tag::before{background:var(--gold)}
 #process .sec-h{color:#fff}
@@ -619,7 +620,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
         </div>
       </div>
     </div>
-    <button class="burger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    <button class="burger" aria-label="Menu" onclick="toggleMenu()"><span></span><span></span><span></span></button>
   </div>
 </header>
 <div class="mob-menu" id="mobMenu"><a href="index.html">Home</a><button class="mob-acc-btn" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Used Machinery <span class="mob-acc-arrow">▾</span></button><div class="mob-acc-panel"><a href="used-excavators.html">Used Excavators</a><a href="used-cat-excavators.html" class="mob-sub-link">— CAT</a><a href="used-excavators.html?brand=HITACHI" class="mob-sub-link">— Hitachi</a><a href="used-excavators.html?brand=KOMATSU" class="mob-sub-link">— Komatsu</a><a href="used-excavators.html?brand=DOOSAN" class="mob-sub-link">— Doosan</a><a href="used-excavators.html?brand=HYUNDAI" class="mob-sub-link">— Hyundai</a><a href="used-excavators.html?brand=VOLVO" class="mob-sub-link">— Volvo</a><a href="used-excavators.html?brand=SANY" class="mob-sub-link">— Sany</a><a href="used-excavators.html?brand=KOBELCO" class="mob-sub-link">— Kobelco</a><a href="used-excavators.html?brand=KUBOTA" class="mob-sub-link">— Kubota</a><a href="used-wheel-loaders.html">Used Wheel Loaders</a><a href="used-bulldozers.html">Used Bulldozers</a><a href="used-motor-graders.html">Used Motor Graders</a><a href="used-road-rollers.html">Used Road Rollers</a><a href="used-forklifts.html">Used Forklifts</a><a href="used-skid-steer-loaders.html">Used Skid Steer Loader</a><a href="used-backhoe-loaders.html">Used Backhoe Loader</a><a href="used-dump-trucks.html">Used Dump Trucks</a></div><button class="mob-acc-btn" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">New Machinery <span class="mob-acc-arrow">▾</span></button><div class="mob-acc-panel"><a href="contact.html">New Hyundai Excavator</a><a href="contact.html">New Sany Excavator</a><a href="contact.html">New XCMG Excavator</a><a href="contact.html">New Develon Excavator</a><a href="contact.html">New Truck Trailers</a></div><a href="shipping.html">Shipping</a><a href="blog.html">Blog</a><a href="about_us.html">About Us</a><a href="contact.html">Contact</a><a href="https://wa.me/8615382453746" target="_blank">💬 WHATSAPP</a></div>
@@ -1030,9 +1031,9 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 <script>
 const WA="https://wa.me/8615382453746";
 const PRODS=[
-  {id:1,cat:"excavator",badge:"Hot",brand:"Caterpillar",name:"CAT 320CL Excavator",desc:"Reliable mid-size excavator, fully inspected and ready to ship.",img:"products/image/CAT_320CL_(1).webp",detail:"products/cat320cl-detail.html",wa:"https://wa.me/8615382453746?text=" + encodeURIComponent("Hi, I am interested in CAT 320CL Excavator. Please send more details.")},
-  {id:2,cat:"excavator",badge:"Hot",brand:"Caterpillar",name:"CAT 320D2L Excavator",desc:"Popular medium excavator in good working condition. Full engine and hydraulic inspection available.",img:"products/image/CAT_320D2L_(1).webp",detail:"products/cat320d2l-detail.html",wa:"https://wa.me/8615382453746?text=" + encodeURIComponent("Hi, I am interested in CAT 320D2L Excavator. Please send more details.")},
-  {id:3,cat:"wheel-loader",badge:"",brand:"SDLG",name:"SDLG 956L Wheel Loader",desc:"2024 model wheel loader, low hours, ready for export inspection.",img:"products/image/SDLG_956L_(1).webp",detail:"products/sdlg956l-detail.html",wa:"https://wa.me/8615382453746?text=" + encodeURIComponent("Hi, I am interested in SDLG 956L Wheel Loader. Please send more details.")},
+  {id:1,cat:"excavator",badge:"Hot",brand:"Caterpillar",name:"CAT 320CL Excavator",desc:"Reliable mid-size excavator, fully inspected and ready to ship.",img:"products/image/CAT_320CL_(1)_card.webp",detail:"products/cat320cl-detail.html",wa:"https://wa.me/8615382453746?text=" + encodeURIComponent("Hi, I am interested in CAT 320CL Excavator. Please send more details.")},
+  {id:2,cat:"excavator",badge:"Hot",brand:"Caterpillar",name:"CAT 320D2L Excavator",desc:"Popular medium excavator in good working condition. Full engine and hydraulic inspection available.",img:"products/image/CAT_320D2L_(1)_card.webp",detail:"products/cat320d2l-detail.html",wa:"https://wa.me/8615382453746?text=" + encodeURIComponent("Hi, I am interested in CAT 320D2L Excavator. Please send more details.")},
+  {id:3,cat:"wheel-loader",badge:"",brand:"SDLG",name:"SDLG 956L Wheel Loader",desc:"2024 model wheel loader, low hours, ready for export inspection.",img:"products/image/SDLG_956L_(1)_card.webp",detail:"products/sdlg956l-detail.html",wa:"https://wa.me/8615382453746?text=" + encodeURIComponent("Hi, I am interested in SDLG 956L Wheel Loader. Please send more details.")},
   {id:4,cat:"wheel-loader",badge:"",brand:"XCMG",name:"XCMG ZL50GN Wheel Loader",desc:"2024 model wheel loader, well maintained, available for immediate export.",img:"products/image/XCMG_ZL50GN_(1).webp",detail:"products/xcmg-zl50gn-detail.html",wa:"https://wa.me/8615382453746?text=" + encodeURIComponent("Hi, I am interested in XCMG ZL50GN Wheel Loader. Please send more details.")},
   {id:5,cat:"excavator",badge:"",brand:"Hyundai",name:"Hyundai HX220HD Excavator",desc:"2023 Hyundai excavator with low hours, hydraulic and engine inspected.",img:"products/image/HYUNDAI_HX220HD_(1).webp",detail:"products/hyundai-hx220hd-detail.html",wa:"https://wa.me/8615382453746?text=" + encodeURIComponent("Hi, I am interested in Hyundai HX220HD Excavator. Please send more details.")},
   {id:6,cat:"excavator",badge:"",brand:"Caterpillar",name:"CAT 320GC Excavator",desc:"2020 CAT excavator, solid working condition, ready to ship.",img:"products/image/CAT_320GC_(1).webp",detail:"products/cat320gc-detail.html",wa:"https://wa.me/8615382453746?text=" + encodeURIComponent("Hi, I am interested in CAT 320GC Excavator. Please send more details.")},
@@ -1317,20 +1318,6 @@ document.addEventListener('keydown', function(e){
 });
 document.addEventListener('selectstart', function(e){ e.preventDefault(); });
 
-// ── WhatsApp 号码保护 ──
-(function(){
-  var p1='8615382453746', p2='8615062540745';
-  document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
-    var href = a.getAttribute('href');
-    var msg = href.split('?text=')[1] || '';
-    a.removeAttribute('href');
-    a.style.cursor='pointer';
-    a.addEventListener('click', function(e){
-      e.stopPropagation();
-      window.open('https://wa.me/'+p1+(msg?'?text='+msg:''), '_blank');
-    });
-  });
-})();
 </script>
 <!-- ── COOKIE BANNER ── -->
 <div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#fff;border-top:3px solid #f5b400;box-shadow:0 -4px 24px rgba(0,0,0,.13);padding:20px 24px;font-family:'DM Sans',sans-serif">
