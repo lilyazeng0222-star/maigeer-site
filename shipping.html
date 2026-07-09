@@ -357,6 +357,10 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
   function gtag(){dataLayer.push(arguments);}
   gtag("js", new Date());
   gtag("config", "G-2BWHXTR004");
+  document.addEventListener("click", function(e){
+    var a = e.target.closest("a[href^='https://wa.me/']");
+    if (a) { gtag("event", "whatsapp_click", {link_url: a.href, page_location: window.location.href}); }
+  });
 </script>
 </head><body><header class="header">
   <div class="wrap nav">
@@ -614,9 +618,9 @@ const PAGE_T = {
     cta_h:'Need a <span style="color:var(--gold)">Shipping</span> Quote?',
     cta_p:"Send us the machine model and destination port. We will check suitable vessels and provide a shipping estimate.",
     cta_btn:"Get Shipping Quote",
-    ft_desc:"Shanghai Maigeer Machinery Trading Co., Ltd.<br>Reliable used construction machinery supplier from China.",
+    ft_desc:"Shanghai Maigeer Machinery Co., Ltd.<br>Reliable used construction machinery supplier from China.",
     ft_products:"Products",ft_nav:"Navigation",ft_contact:"Contact",
-    ft_copyright:"© 2025 Shanghai Maigeer Machinery Trading Co., Ltd. All rights reserved.",
+    ft_copyright:"© 2025 Shanghai Maigeer Machinery Co., Ltd. All rights reserved.",
     page_fn:function(t,set,setText){
       const tags=document.querySelectorAll('.sec-tag');const hs=document.querySelectorAll('.sec-h');
       if(tags[0])tags[0].textContent='Export Process';

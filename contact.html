@@ -301,6 +301,10 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
   function gtag(){dataLayer.push(arguments);}
   gtag("js", new Date());
   gtag("config", "G-2BWHXTR004");
+  document.addEventListener("click", function(e){
+    var a = e.target.closest("a[href^='https://wa.me/']");
+    if (a) { gtag("event", "whatsapp_click", {link_url: a.href, page_location: window.location.href}); }
+  });
 </script>
 </head><body><header class="header">
   <div class="wrap nav">
@@ -377,7 +381,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 <p>We respond quickly and provide real machine information, videos and export support for global buyers.</p>
 <div class="ci2"><div class="ci2-icon">💬</div><div class="ci2-info"><h3>WhatsApp (Preferred)</h3><span>+86 153 8245 3746 / +86 150 6254 0745</span></div></div>
 <div class="ci2"><div class="ci2-icon">▶️</div><div class="ci2-info"><h3>YouTube</h3><span><a href="https://www.youtube.com/@maigeermachinery" style="color:var(--gold)" target="_blank">@maigeermachinery</a></span></div></div>
-<div class="ci2"><div class="ci2-icon">🏢</div><div class="ci2-info"><h3>Company</h3><span>Shanghai Maigeer Machinery Trading Co., Ltd.<br/>No. 888 Maoye Road, Jinshan District, Shanghai, China</span></div></div>
+<div class="ci2"><div class="ci2-icon">🏢</div><div class="ci2-info"><h3>Company</h3><span>Shanghai Maigeer Machinery Co., Ltd.<br/>No. 888 Maoye Road, Jinshan District, Shanghai, China</span></div></div>
 <div class="ci2"><div class="ci2-icon">⏰</div><div class="ci2-info"><h3>Working Hours</h3><span>Monday – Saturday · 08:00 – 18:00 CST</span></div></div>
 </div>
 <div class="cf2">

@@ -388,6 +388,10 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
   function gtag(){dataLayer.push(arguments);}
   gtag("js", new Date());
   gtag("config", "G-2BWHXTR004");
+  document.addEventListener("click", function(e){
+    var a = e.target.closest("a[href^='https://wa.me/']");
+    if (a) { gtag("event", "whatsapp_click", {link_url: a.href, page_location: window.location.href}); }
+  });
 </script>
 </head>
 <body><header class="header">

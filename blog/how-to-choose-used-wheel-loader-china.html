@@ -190,6 +190,18 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 @media(max-width:640px){.fbot-columns{grid-template-columns:1fr}.fbot-soc-grid{grid-template-columns:repeat(4,1fr)}.footer-cta{flex-direction:column;align-items:flex-start}}
 @media(max-width:600px){.footer-cta{padding:32px}.fit-row{grid-template-columns:1fr}.fit-row div{padding:9px 8px;font-size:11px}}
 </style>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2BWHXTR004"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-2BWHXTR004");
+  document.addEventListener("click", function(e){
+    var a = e.target.closest("a[href^='https://wa.me/']");
+    if (a) { gtag("event", "whatsapp_click", {link_url: a.href, page_location: window.location.href}); }
+  });
+</script>
 </head>
 <body>
 <header class="header">
