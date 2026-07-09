@@ -149,23 +149,12 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
 .footer-col a{font-size:13px;color:rgba(255,255,255,.45);transition:color .2s}
 .footer-col a:hover{color:var(--gold)}
-.footer-prod-grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
-.fprod-item{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:rgba(255,255,255,.5);padding:8px 8px 8px 0;border-bottom:1px solid rgba(255,255,255,.06);transition:color .2s}
-.fprod-item:hover{color:var(--gold)}
-.fprod-item span{color:var(--gold);opacity:.6;font-size:11px}
 .footer-bot-full{padding-top:40px;border-top:1px solid rgba(255,255,255,.07)}
-.fbot-contact-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:44px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.07)}
-.fbot-bar-item{display:flex;align-items:center;gap:14px}
-.fbot-bar-icon{width:48px;height:48px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.fbot-bar-icon svg{width:20px;height:20px;fill:var(--gold);stroke:var(--gold)}
-.fbot-bar-icon--email svg,.fbot-bar-icon--addr svg,.fbot-bar-icon--time svg{fill:none}
-.fbot-bar-label{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:3px}
-.fbot-bar-val{font-size:13px;font-weight:600;color:#fff;line-height:1.4}
-.fbot-columns{display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:48px}
+.fbot-columns{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px}
+.fcat-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.fcat-col a{font-size:12px;color:rgba(255,255,255,.5);transition:color .2s}
+.fcat-col a:hover{color:var(--gold)}
 .fbot-contact-title{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#fff;margin-bottom:18px}
-.fbot-citem{display:flex;gap:12px;margin-bottom:10px;align-items:baseline}
-.fbot-clabel{font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);min-width:60px;flex-shrink:0}
-.fbot-cval{font-size:13px;color:rgba(255,255,255,.75);line-height:1.5}
 .fbot-soc-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .fsoc-big{display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:8px;color:rgba(255,255,255,.5);font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;transition:all .2s;text-align:center}
 .fsoc-big svg{width:18px;height:18px;fill:currentColor}
@@ -196,8 +185,10 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 .mob-acc-panel.open{display:flex}
 .mob-acc-panel a{padding:12px 0;font-size:13px;color:rgba(255,255,255,.5);border-bottom:none}
 .mob-sub-link{padding-left:18px!important;font-size:12px!important;color:rgba(255,255,255,.38)!important}
-@media(max-width:960px){.menu,.nav-wa{display:none}.burger{display:flex}.article-layout{grid-template-columns:1fr}.article-sidebar{position:static}.fbot-contact-bar{grid-template-columns:1fr 1fr}.fbot-columns{grid-template-columns:1fr}}
-@media(max-width:600px){.footer-grid{grid-template-columns:1fr}.footer-cta{padding:32px;flex-direction:column}.fbot-soc-grid{grid-template-columns:repeat(2,1fr)}.fit-row div{padding:9px 8px;font-size:11px}}
+@media(max-width:1024px){.fbot-columns{grid-template-columns:1fr 1fr;gap:32px}.fbot-soc-grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:960px){.menu,.nav-wa{display:none}.burger{display:flex}.article-layout{grid-template-columns:1fr}.article-sidebar{position:static}}
+@media(max-width:640px){.fbot-columns{grid-template-columns:1fr}.fbot-soc-grid{grid-template-columns:repeat(4,1fr)}.footer-cta{flex-direction:column;align-items:flex-start}}
+@media(max-width:600px){.footer-cta{padding:32px}.fit-row div{padding:9px 8px;font-size:11px}}
 </style>
 </head>
 <body>
