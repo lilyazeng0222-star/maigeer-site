@@ -268,8 +268,8 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 .sb-cta{background:var(--navy);color:#fff}
 .sb-cta h3{color:#fff}
 .sb-cta p{color:rgba(255,255,255,.7);font-size:13px;margin-bottom:14px;line-height:1.6}
-@media(max-width:960px){.blog-layout{grid-template-columns:1fr}.featured{grid-template-columns:1fr}.fp-photo{min-height:200px}.blog-section{padding:52px 0}}
-@media(max-width:560px){.post-grid{grid-template-columns:1fr}.coming-soon-grid{grid-template-columns:1fr}}
+@media(max-width:960px){.blog-layout{grid-template-columns:1fr}.featured{grid-template-columns:1fr}.fp-photo{min-height:200px}.blog-section{padding:52px 0}.featured-card{grid-template-columns:1fr}.fc-photo{min-height:220px}}
+@media(max-width:560px){.fc-case-info{grid-template-columns:1fr}.fc-body{padding:24px}.coming-soon-grid{grid-template-columns:1fr}}
 
 /* ── LANGUAGE SWITCHER ── */
 .lang-switcher{display:flex;gap:4px;align-items:center}
@@ -422,78 +422,190 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
     </a>
 
     <!-- 常规文章列表 -->
-    <div class="post-grid">
-      <a href="blog/how-to-choose-used-excavator-china.html" class="post-card">
-        <div class="pc-photo">
-          <img src="/images/how_to_choose_used_excavator.webp" alt="Pre-shipment inspection of a used excavator" loading="lazy">
-        </div>
-        <div class="pc-body">
+    <a href="blog/how-to-choose-used-excavator-china.html" class="featured-card">
+      <div class="fc-photo">
+        <img src="/images/how_to_choose_used_excavator.webp" alt="Pre-shipment inspection of a used excavator" loading="lazy">
+        <div class="fc-badge">📋 Buying Guide</div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-meta-row">
           <span class="post-tag">Buying Guide</span>
-          <h3>How to Choose a Used Excavator from China</h3>
-          <p>A complete buyer's guide covering inspection checklist, working hours verification, engine condition and video proof before you pay.</p>
+          <span class="fc-date">📅 July 2026</span>
         </div>
-      </a>
-      <a href="blog/how-to-choose-used-wheel-loader-china.html" class="post-card">
-        <div class="pc-photo">
-          <img src="/images/how_to_choose_used_wheel_loader.webp" alt="Used wheel loader inspection guide" loading="lazy">
+        <h2 class="fc-title">How to Choose a Used Excavator from China</h2>
+        <p class="fc-desc">A complete buyer's guide covering inspection checklist, working hours verification, engine condition and video proof before you pay.</p>
+        <div class="fc-tags">
+          <span>🔧 Engine Test</span>
+          <span>💧 Hydraulics</span>
+          <span>⏱️ Hours Verification</span>
+          <span>🎥 Video Proof</span>
         </div>
-        <div class="pc-body">
+        <div class="fc-case-info">
+          <div class="fc-info-item"><div class="fc-info-label">Category</div><div class="fc-info-val">Excavators</div></div>
+          <div class="fc-info-item"><div class="fc-info-label">Read Time</div><div class="fc-info-val">6 min</div></div>
+          <div class="fc-info-item"><div class="fc-info-label">Covers</div><div class="fc-info-val">5-Step Inspection</div></div>
+        </div>
+        <div class="fc-read">Read Full Guide <span>→</span></div>
+      </div>
+    </a>
+
+    <a href="blog/how-to-choose-used-wheel-loader-china.html" class="featured-card">
+      <div class="fc-photo">
+        <img src="/images/how_to_choose_used_wheel_loader.webp" alt="Used wheel loader inspection guide" loading="lazy">
+        <div class="fc-badge">📋 Buying Guide</div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-meta-row">
           <span class="post-tag">Buying Guide</span>
-          <h3>How to Choose a Used Wheel Loader from China</h3>
-          <p>Articulation joint, hydraulics, tires and transmission checks for used wheel loaders currently in stock.</p>
+          <span class="fc-date">📅 July 2026</span>
         </div>
-      </a>
-      <a href="blog/how-to-choose-used-road-roller-china.html" class="post-card">
-        <div class="pc-photo">
-          <img src="/images/used-road-rollers.webp" alt="Used road roller inspection guide" loading="lazy">
+        <h2 class="fc-title">How to Choose a Used Wheel Loader from China</h2>
+        <p class="fc-desc">Articulation joint, hydraulics, tires and transmission checks for used wheel loaders currently in stock.</p>
+        <div class="fc-tags">
+          <span>🔗 Articulation Joint</span>
+          <span>🛞 Tire Condition</span>
+          <span>⚙️ Transmission</span>
         </div>
-        <div class="pc-body">
+        <div class="fc-case-info">
+          <div class="fc-info-item"><div class="fc-info-label">Category</div><div class="fc-info-val">Wheel Loaders</div></div>
+          <div class="fc-info-item"><div class="fc-info-label">Read Time</div><div class="fc-info-val">5 min</div></div>
+          <div class="fc-info-item"><div class="fc-info-label">Brands</div><div class="fc-info-val">LiuGong · SDLG · XCMG</div></div>
+        </div>
+        <div class="fc-read">Read Full Guide <span>→</span></div>
+      </div>
+    </a>
+
+    <a href="blog/how-to-choose-used-road-roller-china.html" class="featured-card">
+      <div class="fc-photo">
+        <img src="/images/used-road-rollers.webp" alt="Used road roller inspection guide" loading="lazy">
+        <div class="fc-badge">📋 Buying Guide</div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-meta-row">
           <span class="post-tag">Buying Guide</span>
-          <h3>How to Choose a Used Road Roller from China</h3>
-          <p>Drum condition, vibration system and engine checks for XCMG and Dynapac road rollers in stock.</p>
+          <span class="fc-date">📅 July 2026</span>
         </div>
-      </a>
-      <a href="blog/container-vs-roro-shipping.html" class="post-card">
-        <div class="pc-photo">
-          <img src="/images/container_flat_rack_roro.webp" alt="Container shipping for used construction machinery" loading="lazy">
+        <h2 class="fc-title">How to Choose a Used Road Roller from China</h2>
+        <p class="fc-desc">Drum condition, vibration system and engine checks for XCMG and Dynapac road rollers in stock.</p>
+        <div class="fc-tags">
+          <span>🥁 Drum Condition</span>
+          <span>📳 Vibration System</span>
+          <span>⚙️ Engine Check</span>
         </div>
-        <div class="pc-body">
+        <div class="fc-case-info">
+          <div class="fc-info-item"><div class="fc-info-label">Category</div><div class="fc-info-val">Road Rollers</div></div>
+          <div class="fc-info-item"><div class="fc-info-label">Read Time</div><div class="fc-info-val">4 min</div></div>
+          <div class="fc-info-item"><div class="fc-info-label">Brands</div><div class="fc-info-val">XCMG · Dynapac</div></div>
+        </div>
+        <div class="fc-read">Read Full Guide <span>→</span></div>
+      </div>
+    </a>
+
+    <a href="blog/container-vs-roro-shipping.html" class="featured-card">
+      <div class="fc-photo">
+        <img src="/images/container_flat_rack_roro.webp" alt="Container shipping for used construction machinery" loading="lazy">
+        <div class="fc-badge">🚢 Shipping Guide</div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-meta-row">
           <span class="post-tag">Shipping Guide</span>
-          <h3>Container vs Flat Rack vs RoRo Shipping</h3>
-          <p>Understanding the three shipping methods we use for excavators, loaders and trucks — and which one fits your machine.</p>
+          <span class="fc-date">📅 July 2026</span>
         </div>
-      </a>
-      <a href="blog/fob-vs-cif-shipping-terms.html" class="post-card">
-        <div class="pc-photo">
-          <img src="/images/FOB_CIF.webp" alt="Export documentation for used construction machinery" loading="lazy">
+        <h2 class="fc-title">Container vs Flat Rack vs RoRo Shipping</h2>
+        <p class="fc-desc">Understanding the three shipping methods we use for excavators, loaders and trucks — and which one fits your machine.</p>
+        <div class="fc-tags">
+          <span>📦 Container</span>
+          <span>🏗️ Flat Rack</span>
+          <span>🚢 RoRo</span>
+          <span>📋 Documentation</span>
         </div>
-        <div class="pc-body">
+        <div class="fc-case-info">
+          <div class="fc-info-item"><div class="fc-info-label">Topic</div><div class="fc-info-val">Shipping Methods</div></div>
+          <div class="fc-info-item"><div class="fc-info-label">Read Time</div><div class="fc-info-val">5 min</div></div>
+          <div class="fc-info-item"><div class="fc-info-label">Real Case</div><div class="fc-info-val">40HQ to Libya</div></div>
+        </div>
+        <div class="fc-read">Read Full Guide <span>→</span></div>
+      </div>
+    </a>
+
+    <a href="blog/fob-vs-cif-shipping-terms.html" class="featured-card">
+      <div class="fc-photo">
+        <img src="/images/FOB_CIF.webp" alt="Export documentation for used construction machinery" loading="lazy">
+        <div class="fc-badge">🚢 Shipping Guide</div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-meta-row">
           <span class="post-tag">Shipping Guide</span>
-          <h3>FOB vs CIF: Understanding Shipping Terms</h3>
-          <p>A plain-English explanation of FOB and CIF, plus real transit times from Shanghai to major African ports.</p>
+          <span class="fc-date">📅 July 2026</span>
         </div>
-      </a>
-      <a href="blog/why-buy-used-machinery-from-china.html" class="post-card">
-        <div class="pc-photo">
-          <img src="/images/why_buy_used_machinery_from_china.webp" alt="Why buy used construction machinery from China" loading="lazy">
+        <h2 class="fc-title">FOB vs CIF: Understanding Shipping Terms</h2>
+        <p class="fc-desc">A plain-English explanation of FOB and CIF, plus real transit times from Shanghai to major African ports.</p>
+        <div class="fc-tags">
+          <span>📄 Incoterms</span>
+          <span>🛡️ Insurance</span>
+          <span>⏱️ Transit Times</span>
         </div>
-        <div class="pc-body">
+        <div class="fc-case-info">
+          <div class="fc-info-item"><div class="fc-info-label">Topic</div><div class="fc-info-val">Shipping Terms</div></div>
+          <div class="fc-info-item"><div class="fc-info-label">Read Time</div><div class="fc-info-val">4 min</div></div>
+          <div class="fc-info-item"><div class="fc-info-label">Covers</div><div class="fc-info-val">FOB · CIF · Ports</div></div>
+        </div>
+        <div class="fc-read">Read Full Guide <span>→</span></div>
+      </div>
+    </a>
+
+    <a href="blog/why-buy-used-machinery-from-china.html" class="featured-card">
+      <div class="fc-photo">
+        <img src="/images/why_buy_used_machinery_from_china.webp" alt="Why buy used construction machinery from China" loading="lazy">
+        <div class="fc-badge">🌍 Buyer Insights</div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-meta-row">
           <span class="post-tag">Buyer Insights</span>
-          <h3>Why Buy Used Construction Machinery from China?</h3>
-          <p>Real export experience, scale and process behind why global buyers source machinery from China.</p>
+          <span class="fc-date">📅 July 2026</span>
         </div>
-      </a>
-      <a href="blog/how-we-inspect-every-machine.html" class="post-card">
-        <div class="pc-photo">
-          <img src="/images/machine-inspection.webp" alt="How MAIGEER Machinery inspects every machine" loading="lazy">
+        <h2 class="fc-title">Why Buy Used Construction Machinery from China?</h2>
+        <p class="fc-desc">Real export experience, scale and process behind why global buyers source machinery from China.</p>
+        <div class="fc-tags">
+          <span>🏭 Domestic Fleet</span>
+          <span>💰 Competitive Pricing</span>
+          <span>🌍 Export Infrastructure</span>
         </div>
-        <div class="pc-body">
+        <div class="fc-case-info">
+          <div class="fc-info-item"><div class="fc-info-label">Years Export</div><div class="fc-info-val">10+</div></div>
+          <div class="fc-info-item"><div class="fc-info-label">Countries</div><div class="fc-info-val">50+</div></div>
+          <div class="fc-info-item"><div class="fc-info-label">Machines Exported</div><div class="fc-info-val">500+</div></div>
+        </div>
+        <div class="fc-read">Read Full Guide <span>→</span></div>
+      </div>
+    </a>
+
+    <a href="blog/how-we-inspect-every-machine.html" class="featured-card">
+      <div class="fc-photo">
+        <img src="/images/how_we_inspect_every_machine.webp" alt="How MAIGEER Machinery inspects every machine" loading="lazy">
+        <div class="fc-badge">🔍 Our Process</div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-meta-row">
           <span class="post-tag">Our Process</span>
-          <h3>How We Inspect Every Machine Before Sale</h3>
-          <p>The exact engine, hydraulics, hours-verification and video process run on every machine we sell.</p>
+          <span class="fc-date">📅 July 2026</span>
         </div>
-      </a>
-    </div>
+        <h2 class="fc-title">How We Inspect Every Machine Before Sale</h2>
+        <p class="fc-desc">The exact engine, hydraulics, hours-verification and video process run on every machine we sell.</p>
+        <div class="fc-tags">
+          <span>🔧 Engine</span>
+          <span>💧 Hydraulics</span>
+          <span>⏱️ Hours</span>
+          <span>🎥 Video</span>
+        </div>
+        <div class="fc-case-info">
+          <div class="fc-info-item"><div class="fc-info-label">Topic</div><div class="fc-info-val">Our Process</div></div>
+          <div class="fc-info-item"><div class="fc-info-label">Read Time</div><div class="fc-info-val">4 min</div></div>
+          <div class="fc-info-item"><div class="fc-info-label">Steps</div><div class="fc-info-val">5-Step Inspection</div></div>
+        </div>
+        <div class="fc-read">Read Full Guide <span>→</span></div>
+      </div>
+    </a>
 
   </div>
 </section>
