@@ -212,8 +212,9 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 .lang-drop-disabled{opacity:.35;cursor:not-allowed !important}
 
 /* PAGE HERO */
-.page-hero{background:radial-gradient(circle at 80% 10%,rgba(245,180,0,.14),transparent 35%),linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:72px 0 64px;position:relative;overflow:hidden}
-.page-hero::after{content:'EXCAVATOR';position:absolute;right:-20px;top:50%;transform:translateY(-50%);font-family:"Bebas Neue",sans-serif;font-size:clamp(80px,12vw,180px);color:rgba(255,255,255,.03);line-height:1;pointer-events:none;white-space:nowrap}
+.page-hero{background:url("/images/used_excavators.webp") center center/cover no-repeat;color:#fff;padding:72px 0 64px;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 85% 15%,rgba(245,180,0,.1),transparent 40%),linear-gradient(100deg,rgba(6,26,47,.92) 0%,rgba(6,26,47,.72) 40%,rgba(6,26,47,.28) 70%,rgba(6,26,47,.08) 100%);z-index:0}
+.page-hero .wrap{position:relative;z-index:1}
 .breadcrumb{font-size:12px;color:rgba(255,255,255,.5);margin-bottom:18px;font-weight:600;letter-spacing:.06em;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .breadcrumb a{color:rgba(255,255,255,.5);transition:color .2s}
 .breadcrumb a:hover{color:var(--gold)}
@@ -614,7 +615,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
   <div class="wrap">
     <h2 class="sec-h" style="font-size:clamp(20px,2.2vw,26px);margin-bottom:18px">¿Busca También Otro Equipo?</h2>
     <div style="display:flex;flex-wrap:wrap;gap:14px">
-      <a href="../used-wheel-loaders.html" style="display:flex;align-items:center;gap:8px;padding:12px 20px;border:1px solid rgba(0,0,0,.12);border-radius:8px;color:var(--navy);text-decoration:none;font-weight:600;font-size:14px">Cargadoras de ruedas para preparación de terreno <span style="color:var(--gold)">→</span></a>
+      <a href="../used-wheel-loaders.html" style="display:flex;align-items:center;gap:8px;padding:12px 20px;border:1px solid rgba(0,0,0,.12);border-radius:8px;color:var(--navy);text-decoration:none;font-weight:600;font-size:14px">Cargadores frontales para preparación de terreno <span style="color:var(--gold)">→</span></a>
       <a href="../used-bulldozers.html" style="display:flex;align-items:center;gap:8px;padding:12px 20px;border:1px solid rgba(0,0,0,.12);border-radius:8px;color:var(--navy);text-decoration:none;font-weight:600;font-size:14px">Bulldozers para nivelación y desbroce <span style="color:var(--gold)">→</span></a>
       <a href="../used-motor-graders.html" style="display:flex;align-items:center;gap:8px;padding:12px 20px;border:1px solid rgba(0,0,0,.12);border-radius:8px;color:var(--navy);text-decoration:none;font-weight:600;font-size:14px">Motoniveladoras para trabajos viales <span style="color:var(--gold)">→</span></a>
       <a href="../used-road-rollers.html" style="display:flex;align-items:center;gap:8px;padding:12px 20px;border:1px solid rgba(0,0,0,.12);border-radius:8px;color:var(--navy);text-decoration:none;font-weight:600;font-size:14px">Rodillos compactadores para compactación <span style="color:var(--gold)">→</span></a>
