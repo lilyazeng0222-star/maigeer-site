@@ -1,0 +1,71 @@
+/* RTL overrides for Arabic (ar/) pages. Appended after each page's own
+   <style> block, so these rules win on specificity ties by source order.
+   Scope note: this site has no shared stylesheet -- every page carries its
+   own embedded CSS, hand-written with physical properties (left/right,
+   float, margin-left) rather than logical ones (start/end). Auditing and
+   mirroring every declaration on every page for a pixel-perfect RTL layout
+   is a much larger undertaking than translation itself. This v1 overlay
+   takes the pragmatic, lower-risk path: get Arabic text flowing correctly
+   (dir="rtl" + fixing the handful of hardcoded text-align:left rules found
+   site-wide) plus a few high-visibility cosmetic fixes (stat-grid dividers,
+   mobile submenu indent). It deliberately does NOT attempt to mirror
+   floating buttons, dropdown positioning, or absolute-positioned decorative
+   elements -- those keep their LTR-visual position, which is a common and
+   acceptable middle ground for a first RTL pass. Revisit after user QA.
+*/
+
+html[dir="rtl"] body {
+  text-align: right;
+}
+
+/* A handful of components across the site hardcode text-align:left
+   regardless of document direction (found via audit of index-page's
+   embedded styles) -- without this override, Arabic paragraph text would
+   render right-to-left in characters but left-aligned as a block, which
+   reads as visually broken. */
+html[dir="rtl"] .footer,
+html[dir="rtl"] .footer * ,
+html[dir="rtl"] [style*="text-align:left"],
+html[dir="rtl"] [style*="text-align: left"] {
+  text-align: right;
+}
+
+/* Hero stat strip: dividers are drawn with border-right + border-right:none
+   on :last-child, assuming LTR reading order (last item is visually
+   rightmost). Under RTL the last item is visually leftmost, so the divider
+   pattern needs to flip to border-left for the effect to still look correct
+   instead of leaving a stray line on the wrong edge. */
+html[dir="rtl"] .hero-stats .hs,
+html[dir="rtl"] .hs-row .hs,
+html[dir="rtl"] .stats-grid .stat-c {
+  border-right: none !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.07);
+}
+html[dir="rtl"] .hero-stats .hs:last-child,
+html[dir="rtl"] .hs-row .hs:last-child,
+html[dir="rtl"] .stats-grid .stat-c:last-child {
+  border-left: none !important;
+}
+
+/* Mobile nav submenu indent (visually indented from the left in LTR to show
+   nesting) should indent from the right in RTL. */
+html[dir="rtl"] .mob-sub-link {
+  padding-left: 0 !important;
+  padding-right: 18px !important;
+}
+
+/* Checklist / bullet icons that sit to the left of their text in LTR
+   (e.g. the ✔ check-list items on about_us) read more naturally with the
+   icon on the right in RTL -- handled generically via flex row-reverse
+   where the site uses a flex layout for icon+text pairs. */
+html[dir="rtl"] .check li,
+html[dir="rtl"] .trust-chips .chip,
+html[dir="rtl"] .doc-item {
+  flex-direction: row-reverse;
+}
+
+/* Breadcrumb separators ("›" / "/") read fine visually in either direction
+   and are left untouched. Buttons with a trailing arrow ("→", "↓") keep
+   their original glyph -- swapping to "←" per-button proved error-prone
+   across dozens of hand-written strings and is deferred pending user
+   feedback on whether it's worth the risk. */
