@@ -40,6 +40,7 @@
 <link href="https://www.maigeermachinery.com/ar/blog.html" rel="canonical"/>
 <link rel="alternate" hreflang="en" href="https://www.maigeermachinery.com/blog.html">
 <link rel="alternate" hreflang="ar" href="https://www.maigeermachinery.com/ar/blog.html">
+<link rel="alternate" hreflang="es" href="https://www.maigeermachinery.com/es/blog.html">
 <link rel="alternate" hreflang="x-default" href="https://www.maigeermachinery.com/blog.html">
 <!-- Open Graph -->
 <meta content="website" property="og:type"/>
@@ -303,6 +304,19 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 .lang-switcher{position:relative;display:flex;align-items:center}.lang-drop-btn{display:flex;align-items:center;gap:5px;background:none;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.7);font-family:"DM Sans",sans-serif;font-size:11px;font-weight:700;letter-spacing:.06em;padding:5px 11px;cursor:pointer;transition:all .2s;border-radius:4px}.lang-drop-btn:hover{border-color:var(--gold);color:var(--gold)}.lang-drop-arrow{width:9px;height:6px;transition:transform .2s;flex-shrink:0}.lang-drop-btn.open .lang-drop-arrow{transform:rotate(180deg)}.lang-drop-menu{position:absolute;top:calc(100% + 6px);right:0;min-width:180px;background:#1a2236;border:1px solid rgba(255,255,255,.12);border-radius:6px;box-shadow:0 8px 32px rgba(0,0,0,.4);z-index:9999;overflow:hidden;display:none}.lang-drop-menu.open{display:block}.lang-drop-header{font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);padding:10px 14px 6px;border-bottom:1px solid rgba(255,255,255,.08)}.lang-drop-item{display:block;width:100%;text-align:left;background:none;border:none;color:rgba(255,255,255,.65);font-family:"DM Sans",sans-serif;font-size:13px;font-weight:500;padding:9px 14px;cursor:pointer;transition:all .15s}.lang-drop-item:hover,.lang-drop-item.active{background:rgba(245,180,0,.1);color:var(--gold)}.lang-drop-item.active{font-weight:700;color:var(--gold)}
 @media(max-width:1024px){.fbot-columns{grid-template-columns:1fr 1fr;gap:32px}.fbot-soc-grid{grid-template-columns:repeat(4,1fr)}}
 @media(max-width:640px){.fbot-columns{grid-template-columns:1fr}.fbot-soc-grid{grid-template-columns:repeat(4,1fr)}.footer-cta{flex-direction:column;align-items:flex-start}}
+
+/* ── RTL FIX (added) ── */
+[dir="rtl"] .nav{flex-direction:row-reverse}
+[dir="rtl"] .menu{flex-direction:row-reverse}
+[dir="rtl"] .hero-trust{flex-direction:row-reverse}
+[dir="rtl"] .mob-acc-btn{text-align:right}
+[dir="rtl"] .mob-acc-panel{padding-left:0;padding-right:16px}
+[dir="rtl"] .mob-sub-link{padding-left:0!important;padding-right:18px!important}
+[dir="rtl"] .lang-drop-item{text-align:right}
+[dir="rtl"] .lang-drop-menu{right:auto;left:0}
+[dir="rtl"] .fbot-columns{direction:rtl}
+[dir="rtl"] .dropdown-panel{left:auto}
+[dir="rtl"] .sub-panel{left:auto;right:calc(100% + 6px)}
 </style><!-- Google Analytics GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2BWHXTR004"></script>
 <script>
