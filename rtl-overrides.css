@@ -69,3 +69,28 @@ html[dir="rtl"] .doc-item {
    their original glyph -- swapping to "←" per-button proved error-prone
    across dozens of hand-written strings and is deferred pending user
    feedback on whether it's worth the risk. */
+
+/* Fixed-position floating buttons (WhatsApp bubble, and about_us.html's
+   AI-assistant quick-inquiry button/popup) were left pinned to the
+   bottom-right corner in the v1 pass ("deliberately does NOT attempt to
+   mirror floating buttons" above). Real user QA on RTL pages found this
+   causes the buttons to overlap right-aligned page content (e.g.
+   contact.html's "ابقَ على تواصل" heading, about_us.html's numbered
+   process-step cards) -- RTL content naturally sits toward the right edge,
+   which is exactly where these buttons live. Moving them to the
+   bottom-left in RTL is the standard convention for RTL sites' floating
+   chat/CTA widgets and keeps them clear of primary content. Per-page
+   right-offset values vary slightly (24px vs 26px) but a single consistent
+   left value is visually fine for a floating button. */
+html[dir="rtl"] .wa-float {
+  right: auto !important;
+  left: 24px !important;
+}
+html[dir="rtl"] .ai-btn {
+  right: auto !important;
+  left: 24px !important;
+}
+html[dir="rtl"] .ai-pop {
+  right: auto !important;
+  left: 24px !important;
+}
