@@ -726,39 +726,13 @@ document.addEventListener('click',function(e){
  const ai=document.getElementById('aiPop'); if(ai && !e.target.closest('.ai-pop') && !e.target.closest('.ai-btn')) ai.classList.remove('on');
  const menu=document.getElementById('langDropMenu'), btn=document.getElementById('langDropBtn'); if(menu&&btn&&!e.target.closest('.lang-switcher')){menu.classList.remove('open');btn.classList.remove('open');}
 });
-const LANG_LABELS={en:'EN'};
-const RTL_LANGS=new Set([]);
-const I18N={};
-const I18N_PATCH={};
-function normalizeText(s){return (s||'').replace(/\s+/g,' ').trim();}
-function getNodeKey(node){return normalizeText(node.nodeValue);}
-function rememberTextNodes(){
- const walker=document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {acceptNode(node){
-   if(!node.parentElement) return NodeFilter.FILTER_REJECT;
-   const tag=node.parentElement.tagName; if(['SCRIPT','STYLE','NOSCRIPT','SVG'].includes(tag)) return NodeFilter.FILTER_REJECT;
-   const text=normalizeText(node.nodeValue); if(!text || text.length<1) return NodeFilter.FILTER_REJECT;
-   return NodeFilter.FILTER_ACCEPT;
- }});
- let n; while(n=walker.nextNode()){
-   if(!n._i18nKey){
-     n._i18nKey=getNodeKey(n);
-     n._i18nPrefix=(n.nodeValue.match(/^\s*/)||[''])[0];
-     n._i18nSuffix=(n.nodeValue.match(/\s*$/)||[''])[0];
-   }
- }
- document.querySelectorAll('[data-label]').forEach(el=>{ if(!el.dataset.i18nLabelKey) el.dataset.i18nLabelKey=normalizeText(el.getAttribute('data-label')); });
+function selectLang(lang,label){
+  const l=document.getElementById('langDropLabel'); if(l && label) l.textContent=label;
+  const menu=document.getElementById('langDropMenu');
+  const dropBtn=document.getElementById('langDropBtn');
+  if(menu)menu.classList.remove('open');
+  if(dropBtn)dropBtn.classList.remove('open');
 }
-function applyLang(lang){
- rememberTextNodes();
- document.documentElement.lang='en';
- document.documentElement.dir='ltr';
- const btn=document.getElementById('langDropBtn'); if(btn){ const label=btn.querySelector('.lang-current') || document.getElementById('langDropLabel'); if(label) label.textContent='EN'; btn.classList.remove('open'); }
- const menu=document.getElementById('langDropMenu'); if(menu){ menu.classList.remove('open'); menu.querySelectorAll('.lang-drop-item').forEach(item=>item.classList.toggle('active', item.dataset.lang==='en')); }
- localStorage.setItem('maigeer_lang','en');
-}
-function setLang(lang){applyLang(lang);}
-function selectLang(lang,label){applyLang(lang);}
-document.addEventListener('DOMContentLoaded',function(){ rememberTextNodes(); });
 </script>
 
 <script>

@@ -652,10 +652,6 @@ const PAGE_T = {
 (function(){
   function applyAll(lang){
     lang = 'en';
-    document.documentElement.lang = 'en';
-    document.documentElement.dir = 'ltr';
-    const label = document.getElementById('langDropLabel');
-    if(label) label.textContent = 'EN';
     document.querySelectorAll('.lang-drop-item').forEach(btn =>
       btn.classList.toggle('active', (btn.getAttribute('onclick')||'').includes("'en'"))
     );
