@@ -603,11 +603,8 @@ function toggleLangMenu(e){
 function selectLang(lang){ setLanguage(lang); }
 function setLang(lang){ setLanguage(lang); }
 function setLanguage(lang){
-  document.documentElement.lang='en';
-  document.documentElement.dir='ltr';
   document.querySelectorAll('.lang-drop-item').forEach(btn=>btn.classList.toggle('active',btn.dataset.lang==='en'));
-  const current=document.querySelector('.current-lang'); if(current) current.textContent='EN';
-  const menu=document.getElementById('langMenu'); const btn=document.querySelector('.lang-drop-btn');
+    const menu=document.getElementById('langMenu'); const btn=document.querySelector('.lang-drop-btn');
   if(menu) menu.classList.remove('open'); if(btn) btn.classList.remove('open');
   localStorage.setItem('maigeer_lang','en');
 }
