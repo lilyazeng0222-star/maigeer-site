@@ -17,8 +17,42 @@ a:hover{background:#ffd24d}
 </head>
 <body>
   <h1>404</h1>
-  <h2>Page Not Found</h2>
-  <p>The page you're looking for doesn't exist. Let's get you back on track.</p>
-  <a href="/">← Back to Home</a>
+  <h2 id="t-h2">Page Not Found</h2>
+  <p id="t-p">The page you're looking for doesn't exist. Let's get you back on track.</p>
+  <a id="t-a" href="/">← Back to Home</a>
+<script>
+(function(){
+  var path = window.location.pathname;
+  var lang = null;
+  if (path.indexOf('/es/') === 0) lang = 'es';
+  else if (path.indexOf('/ar/') === 0) lang = 'ar';
+  if (!lang) return;
+  var copy = {
+    es: {
+      title: 'Página No Encontrada | MAIGEER MACHINERY',
+      h2: 'Página No Encontrada',
+      p: 'La página que busca no existe. Vamos a llevarlo de vuelta al camino correcto.',
+      aText: '← Volver al Inicio',
+      aHref: '/es/'
+    },
+    ar: {
+      title: 'الصفحة غير موجودة | MAIGEER MACHINERY',
+      h2: 'الصفحة غير موجودة',
+      p: 'الصفحة التي تبحث عنها غير موجودة. دعنا نعيدك إلى المسار الصحيح.',
+      aText: '→ العودة إلى الرئيسية',
+      aHref: '/ar/'
+    }
+  };
+  var c = copy[lang];
+  document.documentElement.lang = lang;
+  if (lang === 'ar') document.documentElement.dir = 'rtl';
+  document.title = c.title;
+  document.getElementById('t-h2').textContent = c.h2;
+  document.getElementById('t-p').textContent = c.p;
+  var a = document.getElementById('t-a');
+  a.textContent = c.aText;
+  a.href = c.aHref;
+})();
+</script>
 </body>
 </html>
