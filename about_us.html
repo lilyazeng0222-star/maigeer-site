@@ -657,53 +657,13 @@ document.addEventListener('click',function(e){
   if(menu && btn && !e.target.closest('.lang-switcher')){menu.classList.remove('open');btn.classList.remove('open');}
 });
 
-const LANG_LABELS={en:'EN'};
-const RTL_LANGS=new Set([]);
-const T={};
-
-let boundTextNodes=[];
-function normalizeText(s){return (s||'').replace(/\s+/g,' ').trim();}
-function bindTextNodes(){
-  boundTextNodes=[];
-  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:function(node){
-    const p=node.parentElement;
-    if(!p || ['SCRIPT','STYLE','SVG','PATH'].includes(p.tagName)) return NodeFilter.FILTER_REJECT;
-    const key=normalizeText(node.nodeValue);
-    if(!key) return NodeFilter.FILTER_REJECT;
-    return NodeFilter.FILTER_ACCEPT;
-  }});
-  let node;
-  while(node=walker.nextNode()){
-    boundTextNodes.push({node:node,key:normalizeText(node.nodeValue)});
-  }
-}
 function selectLang(lang,label){
-  setLang(lang);
-}
-function setLang(lang){
-  lang=lang||'en';
-  const dict=T[lang]||{};
-  document.documentElement.lang='en';
-  document.documentElement.dir='ltr';
-  boundTextNodes.forEach(function(item){
-    item.node.nodeValue=dict[item.key]||item.key;
-  });
-  const label=document.getElementById('langDropLabel');
-  if(label)label.textContent='EN';
-  document.querySelectorAll('.lang-drop-item').forEach(function(btn){
-    const on=(btn.getAttribute('onclick')||'').includes("'en'");
-    btn.classList.toggle('active',on);
-  });
+  const l=document.getElementById('langDropLabel'); if(l && label) l.textContent=label;
   const menu=document.getElementById('langDropMenu');
   const dropBtn=document.getElementById('langDropBtn');
   if(menu)menu.classList.remove('open');
   if(dropBtn)dropBtn.classList.remove('open');
-  localStorage.setItem('maigeer_lang','en');
 }
-document.addEventListener('DOMContentLoaded',function(){
-  bindTextNodes();
-  setLang('en');
-});
 </script>
 
 
