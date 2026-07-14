@@ -26,6 +26,7 @@ a:hover{background:#ffd24d}
   var lang = null;
   if (path.indexOf('/es/') === 0) lang = 'es';
   else if (path.indexOf('/ar/') === 0) lang = 'ar';
+  else if (path.indexOf('/ru/') === 0) lang = 'ru';
   if (!lang) return;
   var copy = {
     es: {
@@ -41,6 +42,13 @@ a:hover{background:#ffd24d}
       p: 'الصفحة التي تبحث عنها غير موجودة. دعنا نعيدك إلى المسار الصحيح.',
       aText: '→ العودة إلى الرئيسية',
       aHref: '/ar/'
+    },
+    ru: {
+      title: 'Страница Не Найдена | MAIGEER MACHINERY',
+      h2: 'Страница Не Найдена',
+      p: 'Страница, которую вы ищете, не существует. Давайте вернём вас на верный путь.',
+      aText: '← На Главную',
+      aHref: '/ru/'
     }
   };
   var c = copy[lang];
