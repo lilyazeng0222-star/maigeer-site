@@ -44,17 +44,17 @@
   },
   "model": "956F",
   "offers": {
-    "@type": "Offer",
-    "price": "0",
+    "@type": "AggregateOffer",
+    "lowPrice": "23400",
+    "highPrice": "27200",
     "priceCurrency": "USD",
-    "description": "Contact us for best price",
     "availability": "https://schema.org/InStock",
     "seller": {
       "@type": "Organization",
       "name": "Shanghai Maigeer Machinery Co., Ltd.",
       "url": "https://www.maigeermachinery.com",
       "telephone": "+8615382453746",
-      "email": "15382453746@163.com",
+      "email": "lilya@maigeermachinery.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "No. 888 Maoye Road",
@@ -62,7 +62,8 @@
         "addressRegion": "Shanghai",
         "addressCountry": "CN"
       }
-    }
+    },
+    "offerCount": "1"
   },
   "additionalProperty": [
     {
@@ -105,7 +106,11 @@
       "name": "Condition",
       "value": "Used"
     }
-  ]
+  ],
+  "image": "https://www.maigeermachinery.com/products/image/SDLG_956F_(1).webp",
+  "itemCondition": "https://schema.org/UsedCondition",
+  "sku": "MG-WL956F-001",
+  "mpn": "956F"
 }
 </script>
 
@@ -117,7 +122,7 @@
   "name": "Shanghai Maigeer Machinery Co., Ltd.",
   "url": "https://www.maigeermachinery.com",
   "telephone": "+8615382453746",
-  "email": "15382453746@163.com",
+  "email": "lilya@maigeermachinery.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "No. 888 Maoye Road",
@@ -269,6 +274,12 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
 .product-title{font-size:clamp(38px,5vw,58px);line-height:.95;letter-spacing:.02em;color:#fff;margin-bottom:6px}
 .product-title span{color:var(--gold)}
 .product-subtitle{font-size:15px;color:rgba(255,255,255,.45);font-weight:400;letter-spacing:.04em;text-transform:uppercase;margin-bottom:28px}
+
+
+/* Price display */
+.price-display{margin-bottom:24px}
+.price-label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:6px}
+.price-value{font-family:"Bebas Neue",sans-serif;font-size:clamp(30px,4vw,40px);color:var(--gold);letter-spacing:.02em;line-height:1}
 
 /* Key specs strip */
 .kspec-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08);margin-bottom:28px}
@@ -529,7 +540,7 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
         <img src="../../images/logo-main.webp" alt="Maigeer Logo" style="width:38px;height:38px;object-fit:contain;flex-shrink:0">
         <span class="logo-name">MAIGEER <span>MACHINERY</span></span>
       </a>
-      <ul class="menu"><li><a href="../index.html">Главная</a></li><li class="has-dropdown"><a href="../../used-machinery.html">Спецтехника Б/У</a><div class="dropdown-panel">
+      <ul class="menu"><li><a href="../index.html">Главная</a></li><li class="has-dropdown"><a href="../used-machinery.html">Спецтехника Б/У</a><div class="dropdown-panel">
       <div class="has-dropdown sub">
         <a href="../used-excavators.html">Экскаваторы Б/У <span class="submenu-arrow">›</span></a>
         <div class="dropdown-panel sub-panel">
@@ -544,22 +555,22 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
           <a href="../used-excavators.html?brand=KUBOTA">Kubota</a>
         </div>
       </div>
-      <a href="../../used-wheel-loaders.html" class="on">Фронтальные Погрузчики Б/У</a>
-      <a href="../../used-bulldozers.html">Бульдозеры Б/У</a>
-      <a href="../../used-motor-graders.html">Автогрейдеры Б/У</a>
-      <a href="../../used-road-rollers.html">Дорожные Катки Б/У</a>
-      <a href="../../used-forklifts.html">Погрузчики Б/У</a>
-      <a href="../../used-skid-steer-loaders.html">Мини-Погрузчики Б/У</a>
-      <a href="../../used-backhoe-loaders.html">Экскаваторы-Погрузчики Б/У</a>
-      <a href="../../used-dump-trucks.html">Самосвалы Б/У</a>
+      <a href="../used-wheel-loaders.html" class="on">Фронтальные Погрузчики Б/У</a>
+      <a href="../used-bulldozers.html">Бульдозеры Б/У</a>
+      <a href="../used-motor-graders.html">Автогрейдеры Б/У</a>
+      <a href="../used-road-rollers.html">Дорожные Катки Б/У</a>
+      <a href="../used-forklifts.html">Вилочные Погрузчики Б/У</a>
+      <a href="../used-skid-steer-loaders.html">Мини-Погрузчики Б/У</a>
+      <a href="../used-backhoe-loaders.html">Экскаваторы-Погрузчики Б/У</a>
+      <a href="../used-dump-trucks.html">Самосвалы Б/У</a>
     </div></li><li class="has-dropdown"><a>Новая Техника</a><div class="dropdown-panel">
-      <a href="../../contact.html">Новый Экскаватор Hyundai</a>
-      <a href="../../contact.html">Новый Экскаватор Sany</a>
-      <a href="../../contact.html">Новый Экскаватор XCMG</a>
-      <a href="../../contact.html">Новый Экскаватор Develon</a>
-      <a href="../../contact.html">Новые Прицепы</a>
-    </div></li><li><a href="../../shipping.html">Доставка</a></li><li><a href="../../blog.html">Блог</a></li><li class="has-dropdown"><a href="../../about_us.html">О Нас</a><div class="dropdown-panel">
-      <a href="../../contact.html">Контакты</a>
+      <a href="../contact.html">Новый Экскаватор Hyundai</a>
+      <a href="../contact.html">Новый Экскаватор Sany</a>
+      <a href="../contact.html">Новый Экскаватор XCMG</a>
+      <a href="../contact.html">Новый Экскаватор Develon</a>
+      <a href="../contact.html">Новые Прицепы</a>
+    </div></li><li><a href="../shipping.html">Доставка</a></li><li><a href="../blog.html">Блог</a></li><li class="has-dropdown"><a href="../about_us.html">О Нас</a><div class="dropdown-panel">
+      <a href="../contact.html">Контакты</a>
     </div></li></ul>
       <div style="display:flex;align-items:center;gap:12px">
         <a href="https://wa.me/8615382453746" target="_blank" class="nav-wa"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WHATSAPP</a>
@@ -587,7 +598,7 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
     </nav>
   </div>
 </header>
-<div class="mob-menu" id="mobMenu"><a href="../index.html">Главная</a><button class="mob-acc-btn" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Спецтехника Б/У <span class="mob-acc-arrow">▾</span></button><div class="mob-acc-panel"><a href="../used-excavators.html">Экскаваторы Б/У</a><a href="../used-excavators.html?brand=CAT" class="mob-sub-link">— CAT</a><a href="../used-excavators.html?brand=HITACHI" class="mob-sub-link">— Hitachi</a><a href="../used-excavators.html?brand=KOMATSU" class="mob-sub-link">— Komatsu</a><a href="../used-excavators.html?brand=DOOSAN" class="mob-sub-link">— Doosan</a><a href="../used-excavators.html?brand=HYUNDAI" class="mob-sub-link">— Hyundai</a><a href="../used-excavators.html?brand=VOLVO" class="mob-sub-link">— Volvo</a><a href="../used-excavators.html?brand=SANY" class="mob-sub-link">— Sany</a><a href="../used-excavators.html?brand=KOBELCO" class="mob-sub-link">— Kobelco</a><a href="../used-excavators.html?brand=KUBOTA" class="mob-sub-link">— Kubota</a><a href="../../used-wheel-loaders.html">Фронтальные Погрузчики Б/У</a><a href="../../used-bulldozers.html">Бульдозеры Б/У</a><a href="../../used-motor-graders.html">Автогрейдеры Б/У</a><a href="../../used-road-rollers.html">Дорожные Катки Б/У</a><a href="../../used-forklifts.html">Погрузчики Б/У</a><a href="../../used-skid-steer-loaders.html">Мини-Погрузчики Б/У</a><a href="../../used-backhoe-loaders.html">Экскаваторы-Погрузчики Б/У</a><a href="../../used-dump-trucks.html">Самосвалы Б/У</a></div><button class="mob-acc-btn" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Новая Техника <span class="mob-acc-arrow">▾</span></button><div class="mob-acc-panel"><a href="../../contact.html">Новый Экскаватор Hyundai</a><a href="../../contact.html">Новый Экскаватор Sany</a><a href="../../contact.html">Новый Экскаватор XCMG</a><a href="../../contact.html">Новый Экскаватор Develon</a><a href="../../contact.html">Новые Прицепы</a></div><a href="../../shipping.html">Доставка</a><a href="../../blog.html">Блог</a><a href="../../about_us.html">О Нас</a><a href="../../contact.html">Контакты</a><a href="https://wa.me/8615382453746" target="_blank">💬 WHATSAPP</a></div>
+<div class="mob-menu" id="mobMenu"><a href="../index.html">Главная</a><button class="mob-acc-btn" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Спецтехника Б/У <span class="mob-acc-arrow">▾</span></button><div class="mob-acc-panel"><a href="../used-excavators.html">Экскаваторы Б/У</a><a href="../used-excavators.html?brand=CAT" class="mob-sub-link">— CAT</a><a href="../used-excavators.html?brand=HITACHI" class="mob-sub-link">— Hitachi</a><a href="../used-excavators.html?brand=KOMATSU" class="mob-sub-link">— Komatsu</a><a href="../used-excavators.html?brand=DOOSAN" class="mob-sub-link">— Doosan</a><a href="../used-excavators.html?brand=HYUNDAI" class="mob-sub-link">— Hyundai</a><a href="../used-excavators.html?brand=VOLVO" class="mob-sub-link">— Volvo</a><a href="../used-excavators.html?brand=SANY" class="mob-sub-link">— Sany</a><a href="../used-excavators.html?brand=KOBELCO" class="mob-sub-link">— Kobelco</a><a href="../used-excavators.html?brand=KUBOTA" class="mob-sub-link">— Kubota</a><a href="../used-wheel-loaders.html">Фронтальные Погрузчики Б/У</a><a href="../used-bulldozers.html">Бульдозеры Б/У</a><a href="../used-motor-graders.html">Автогрейдеры Б/У</a><a href="../used-road-rollers.html">Дорожные Катки Б/У</a><a href="../used-forklifts.html">Вилочные Погрузчики Б/У</a><a href="../used-skid-steer-loaders.html">Мини-Погрузчики Б/У</a><a href="../used-backhoe-loaders.html">Экскаваторы-Погрузчики Б/У</a><a href="../used-dump-trucks.html">Самосвалы Б/У</a></div><button class="mob-acc-btn" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Новая Техника <span class="mob-acc-arrow">▾</span></button><div class="mob-acc-panel"><a href="../contact.html">Новый Экскаватор Hyundai</a><a href="../contact.html">Новый Экскаватор Sany</a><a href="../contact.html">Новый Экскаватор XCMG</a><a href="../contact.html">Новый Экскаватор Develon</a><a href="../contact.html">Новые Прицепы</a></div><a href="../shipping.html">Доставка</a><a href="../blog.html">Блог</a><a href="../about_us.html">О Нас</a><a href="../contact.html">Контакты</a><a href="https://wa.me/8615382453746" target="_blank">💬 WHATSAPP</a></div>
 
 <!-- BREADCRUMB -->
 <div class="breadcrumb">
@@ -630,6 +641,12 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
         </div>
         <h1 class="product-title"><span>SDLG</span> 956F</h1>
         <div class="product-subtitle">Фронтальный Погрузчик · Год 2025</div>
+
+        <!-- Price Display -->
+        <div class="price-display">
+          <div class="price-label">Диапазон Цен (EXW)</div>
+          <div class="price-value"><span dir="ltr">$23,400 – $27,200</span></div>
+        </div>
 
         <!-- Key Specs Strip -->
         <div class="kspec-strip">
@@ -920,7 +937,7 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
     <div class="sec-tag" data-i18n="dp_related_tag">Есть Другие Единицы</div>
     <h2 class="sec-h" data-i18n="dp_related">Похожие Фронтальные Погрузчики</h2>
     <div class="related-grid">
-      <a class="pcard" href="../../products/liugong-856h-detail.html">
+      <a class="pcard" href="../products/liugong-856h-detail.html">
         <div class="pcard-img">
           <img src="../../products/image/LIUGONG_856H_(1).webp" alt="LiuGong 856H" onerror="this.style.display='none'">
           <div class="pcard-badge">ФРОНТАЛЬНЫЙ ПОГРУЗЧИК</div>
@@ -937,7 +954,7 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
         </div>
       </a>
 
-      <a class="pcard" href="../../products/liugong-870h-detail.html">
+      <a class="pcard" href="../products/liugong-870h-detail.html">
         <div class="pcard-img">
           <img src="../../products/image/LIUGONG_870H_(1).webp" alt="LiuGong 870H" onerror="this.style.display='none'">
           <div class="pcard-badge">ФРОНТАЛЬНЫЙ ПОГРУЗЧИК</div>
@@ -954,7 +971,7 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
         </div>
       </a>
 
-      <a class="pcard" href="../../products/xcmg-zl50gn-detail.html">
+      <a class="pcard" href="../products/xcmg-zl50gn-detail.html">
         <div class="pcard-img">
           <img src="../../products/image/XCMG_ZL50GN_(1).webp" alt="XCMG ZL50GN" onerror="this.style.display='none'">
           <div class="pcard-badge">ФРОНТАЛЬНЫЙ ПОГРУЗЧИК</div>
@@ -1006,23 +1023,23 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
             📞 +86 153 8245 3746 / +86 150 6254 0745
           </p>
           <p style="font-size:11px;color:rgba(255,255,255,.32);line-height:1.7;margin-top:4px">
-            ✉️ 15382453746@163.com
+            ✉️ lilya@maigeermachinery.com
           </p>
         </div>
 
         <!-- Спецтехника Б/У -->
         <div class="fcat-col">
-          <a href="../../used-machinery.html" class="fbot-contact-title" style="display:block;text-decoration:none">Спецтехника Б/У</a>
+          <a href="../used-machinery.html" class="fbot-contact-title" style="display:block;text-decoration:none">Спецтехника Б/У</a>
           <ul>
             <li><a href="../used-excavators.html">Экскаваторы Б/У</a></li>
-            <li><a href="../../used-wheel-loaders.html">Фронтальные Погрузчики Б/У</a></li>
-            <li><a href="../../used-bulldozers.html">Бульдозеры Б/У</a></li>
-            <li><a href="../../used-motor-graders.html">Автогрейдеры Б/У</a></li>
-            <li><a href="../../used-road-rollers.html">Дорожные Катки Б/У</a></li>
-            <li><a href="../../used-forklifts.html">Погрузчики Б/У</a></li>
-            <li><a href="../../used-skid-steer-loaders.html">Мини-Погрузчики Б/У</a></li>
-            <li><a href="../../used-backhoe-loaders.html">Экскаваторы-Погрузчики Б/У</a></li>
-            <li><a href="../../used-dump-trucks.html">Самосвалы Б/У</a></li>
+            <li><a href="../used-wheel-loaders.html">Фронтальные Погрузчики Б/У</a></li>
+            <li><a href="../used-bulldozers.html">Бульдозеры Б/У</a></li>
+            <li><a href="../used-motor-graders.html">Автогрейдеры Б/У</a></li>
+            <li><a href="../used-road-rollers.html">Дорожные Катки Б/У</a></li>
+            <li><a href="../used-forklifts.html">Вилочные Погрузчики Б/У</a></li>
+            <li><a href="../used-skid-steer-loaders.html">Мини-Погрузчики Б/У</a></li>
+            <li><a href="../used-backhoe-loaders.html">Экскаваторы-Погрузчики Б/У</a></li>
+            <li><a href="../used-dump-trucks.html">Самосвалы Б/У</a></li>
           </ul>
         </div>
 
@@ -1030,11 +1047,11 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
         <div class="fcat-col">
           <div class="fbot-contact-title">Новая Техника</div>
           <ul>
-            <li><a href="../../contact.html">Новый Экскаватор Hyundai</a></li>
-            <li><a href="../../contact.html">Новый Экскаватор Sany</a></li>
-            <li><a href="../../contact.html">Новый Экскаватор XCMG</a></li>
-            <li><a href="../../contact.html">Новый Экскаватор Develon</a></li>
-            <li><a href="../../contact.html">Новые Прицепы</a></li>
+            <li><a href="../contact.html">Новый Экскаватор Hyundai</a></li>
+            <li><a href="../contact.html">Новый Экскаватор Sany</a></li>
+            <li><a href="../contact.html">Новый Экскаватор XCMG</a></li>
+            <li><a href="../contact.html">Новый Экскаватор Develon</a></li>
+            <li><a href="../contact.html">Новые Прицепы</a></li>
           </ul>
         </div>
 
