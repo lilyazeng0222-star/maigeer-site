@@ -42,17 +42,17 @@
   },
   "model": "246C",
   "offers": {
-    "@type": "Offer",
-    "price": "0",
+    "@type": "AggregateOffer",
+    "lowPrice": "21100",
+    "highPrice": "24700",
     "priceCurrency": "USD",
-    "description": "Contact us for best price",
     "availability": "https://schema.org/InStock",
     "seller": {
       "@type": "Organization",
       "name": "Shanghai Maigeer Machinery Co., Ltd.",
       "url": "https://www.maigeermachinery.com",
       "telephone": "+8615382453746",
-      "email": "15382453746@163.com",
+      "email": "lilya@maigeermachinery.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "No. 888 Maoye Road",
@@ -60,7 +60,8 @@
         "addressRegion": "Shanghai",
         "addressCountry": "CN"
       }
-    }
+    },
+    "offerCount": "1"
   },
   "additionalProperty": [
     {
@@ -103,7 +104,11 @@
       "name": "Origin",
       "value": "China"
     }
-  ]
+  ],
+  "image": "https://www.maigeermachinery.com/products/image/CAT_246C_(1).webp",
+  "itemCondition": "https://schema.org/UsedCondition",
+  "sku": "MG-SS-246C-035",
+  "mpn": "246C"
 }
 </script>
 
@@ -115,7 +120,7 @@
   "name": "Shanghai Maigeer Machinery Co., Ltd.",
   "url": "https://www.maigeermachinery.com",
   "telephone": "+8615382453746",
-  "email": "15382453746@163.com",
+  "email": "lilya@maigeermachinery.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "No. 888 Maoye Road",
@@ -267,6 +272,12 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
 .product-title{font-size:clamp(38px,5vw,58px);line-height:.95;letter-spacing:.02em;color:#fff;margin-bottom:6px}
 .product-title span{color:var(--gold)}
 .product-subtitle{font-size:15px;color:rgba(255,255,255,.45);font-weight:400;letter-spacing:.04em;text-transform:uppercase;margin-bottom:28px}
+
+
+/* Price display */
+.price-display{margin-bottom:24px}
+.price-label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:6px}
+.price-value{font-family:"Bebas Neue",sans-serif;font-size:clamp(30px,4vw,40px);color:var(--gold);letter-spacing:.02em;line-height:1}
 
 /* Key specs strip */
 .kspec-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08);margin-bottom:28px}
@@ -570,7 +581,7 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
             <div class="lang-drop-header">Idiomas -></div>
             <a class="lang-drop-item" href="https://www.maigeermachinery.com/products/cat-246c-detail.html">English</a>
             <a class="lang-drop-item active" href="https://www.maigeermachinery.com/es/products/cat-246c-detail.html">Spanish (Español)</a>
-            <button class="lang-drop-item lang-drop-disabled" disabled title="Coming soon">Russian (Русский)</button>
+            <a class="lang-drop-item" href="https://www.maigeermachinery.com/ru/products/cat-246c-detail.html">Russian (Русский)</a>
             <button class="lang-drop-item lang-drop-disabled" disabled title="Coming soon">French (Français)</button>
             <a class="lang-drop-item" href="https://www.maigeermachinery.com/ar/products/cat-246c-detail.html">Arabic (العربية)</a>
             <button class="lang-drop-item lang-drop-disabled" disabled title="Coming soon">Portuguese (Português)</button>
@@ -628,6 +639,12 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
         </div>
         <h1 class="product-title"><span>CAT</span> 246C</h1>
         <div class="product-subtitle">Minicargadora · Año 2018</div>
+
+        <!-- Price Display -->
+        <div class="price-display">
+          <div class="price-label">Rango de Precio (EXW)</div>
+          <div class="price-value"><span dir="ltr">$21,100 – $24,700</span></div>
+        </div>
 
         <!-- Key Specs Strip -->
         <div class="kspec-strip">
@@ -1020,7 +1037,7 @@ h1,h2,h3,.logo-name{font-family:"Bebas Neue",sans-serif}
             📞 +86 153 8245 3746 / +86 150 6254 0745
           </p>
           <p style="font-size:11px;color:rgba(255,255,255,.32);line-height:1.7;margin-top:4px">
-            ✉️ 15382453746@163.com
+            ✉️ lilya@maigeermachinery.com
           </p>
         </div>
 
