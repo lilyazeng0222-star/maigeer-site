@@ -253,6 +253,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 .pcard-name{font-family:"Bebas Neue",sans-serif;font-size:22px;letter-spacing:.03em;color:var(--navy);line-height:1.1}
 .pcard-specs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:6px}
 .pcard-spec{font-size:11px;font-weight:600;color:var(--muted);background:var(--light);padding:3px 8px;border-radius:4px}
+.pcard-spec-price{background:rgba(245,180,0,.18);color:var(--navy);font-weight:700}
 .pcard-wa{display:flex;align-items:center;justify-content:center;gap:6px;background:var(--green);color:#fff;font-family:"DM Sans",sans-serif;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:10px;margin:8px 14px 14px;border-radius:6px;transition:filter .2s}
 .pcard-wa:hover{filter:brightness(1.1)}
 .pcard-wa svg{width:14px;height:14px;fill:#fff;flex-shrink:0}
@@ -740,7 +741,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 
 <!-- PRODUCT DATA + RENDER -->
 <script>
-const FORKLIFTS = [{"id":"heli-cpcd30","brand":"HELI","brandFull":"Heli","name":"HELI CPCD30","img":"products/image/HELI_CPCD30_(1)_card.webp","specs":[["Year","2025"],["Hours","180H"],["Capacity","3.0 T"]],"detail":"products/heli-cpcd30-detail.html","wa":"https://wa.me/8615382453746?text=Hi%2C+I'm+interested+in+HELI+CPCD30+(ID%3A+MG-FK-CPCD30-034).+Please+send+more+details."},{"id":"tcm-fd100","brand":"TCM","brandFull":"TCM","name":"TCM FD100","img":"products/image/TCM_FD100_(1)_card.webp","specs":[["Year","2024"],["Hours","630H"],["Capacity","10 T"]],"detail":"products/tcm-fd100-detail.html","wa":"https://wa.me/8615382453746?text=Hi%2C+I'm+interested+in+TCM+FD100+(ID%3A+MG-FK-FD100-033).+Please+send+more+details."},{"id":"tcm-fd30","brand":"TCM","brandFull":"TCM","name":"TCM FD30","img":"products/image/TCM_FD30_(1)_card.webp","specs":[["Year","2025"],["Hours","280H"],["Capacity","3.0 T"]],"detail":"products/tcm-fd30-detail.html","wa":"https://wa.me/8615382453746?text=Hi%2C+I'm+interested+in+TCM+FD30+(ID%3A+MG-FK-FD30-032).+Please+send+more+details."},{"id":"toyota-fd30","brand":"TOYOTA","brandFull":"Toyota","name":"Toyota FD30","img":"products/image/TOYOTA_FD30_(1)_card.webp","specs":[["Year","2025"],["Hours","320H"],["Capacity","3.0 T"]],"detail":"products/toyota-fd30-detail.html","wa":"https://wa.me/8615382453746?text=Hi%2C+I'm+interested+in+Toyota+FD30+(ID%3A+MG-FK-FD30-031).+Please+send+more+details."}];
+const FORKLIFTS = [{"id":"heli-cpcd30","brand":"HELI","brandFull":"Heli","name":"HELI CPCD30","img":"products/image/HELI_CPCD30_(1)_card.webp","specs":[["Year","2025"],["Hours","180H"],["Capacity","3.0 T"],["Price","$4,500+",true]],"detail":"products/heli-cpcd30-detail.html","wa":"https://wa.me/8615382453746?text=Hi%2C+I'm+interested+in+HELI+CPCD30+(ID%3A+MG-FK-CPCD30-034).+Please+send+more+details."},{"id":"tcm-fd100","brand":"TCM","brandFull":"TCM","name":"TCM FD100","img":"products/image/TCM_FD100_(1)_card.webp","specs":[["Year","2024"],["Hours","630H"],["Capacity","10 T"],["Price","$5,800+",true]],"detail":"products/tcm-fd100-detail.html","wa":"https://wa.me/8615382453746?text=Hi%2C+I'm+interested+in+TCM+FD100+(ID%3A+MG-FK-FD100-033).+Please+send+more+details."},{"id":"tcm-fd30","brand":"TCM","brandFull":"TCM","name":"TCM FD30","img":"products/image/TCM_FD30_(1)_card.webp","specs":[["Year","2025"],["Hours","280H"],["Capacity","3.0 T"],["Price","$23,600+",true]],"detail":"products/tcm-fd30-detail.html","wa":"https://wa.me/8615382453746?text=Hi%2C+I'm+interested+in+TCM+FD30+(ID%3A+MG-FK-FD30-032).+Please+send+more+details."},{"id":"toyota-fd30","brand":"TOYOTA","brandFull":"Toyota","name":"Toyota FD30","img":"products/image/TOYOTA_FD30_(1)_card.webp","specs":[["Year","2025"],["Hours","320H"],["Capacity","3.0 T"],["Price","$7,120+",true]],"detail":"products/toyota-fd30-detail.html","wa":"https://wa.me/8615382453746?text=Hi%2C+I'm+interested+in+Toyota+FD30+(ID%3A+MG-FK-FD30-031).+Please+send+more+details."}];
 
 let activeBrand = "all";
 function filterBrand(brand, btn) {
@@ -772,7 +773,7 @@ function renderGrid() {
         <div class="pcard-brand">${m.brandFull.toUpperCase()}</div>
         <div class="pcard-name">${m.name}</div>
         <div class="pcard-specs">
-          ${m.specs.map(s => `<span class="pcard-spec">${s[0]}: ${s[1]}</span>`).join('')}
+          ${m.specs.map(s => `<span class="pcard-spec${s[2] ? ' pcard-spec-price' : ''}">${s[0]}: ${s[1]}</span>`).join('')}
         </div>
       </div>
       <a class="pcard-wa" href="${m.wa}" target="_blank" style="position:relative;z-index:2">

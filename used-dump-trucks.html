@@ -244,6 +244,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 .pcard-name{font-family:"Bebas Neue",sans-serif;font-size:22px;letter-spacing:.03em;color:var(--navy);line-height:1.1}
 .pcard-specs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:6px}
 .pcard-spec{font-size:11px;font-weight:600;color:var(--muted);background:var(--light);padding:3px 8px;border-radius:4px}
+.pcard-spec-price{background:rgba(245,180,0,.18);color:var(--navy);font-weight:700}
 .pcard-wa{display:flex;align-items:center;justify-content:center;gap:6px;background:var(--green);color:#fff;font-family:"DM Sans",sans-serif;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:10px;margin:8px 14px 14px;border-radius:6px;transition:filter .2s}
 .pcard-wa:hover{filter:brightness(1.1)}
 .pcard-wa svg{width:14px;height:14px;fill:#fff;flex-shrink:0}
@@ -736,7 +737,7 @@ function renderGrid() {
         <div class="pcard-brand">${m.brandFull.toUpperCase()}</div>
         <div class="pcard-name">${m.name}</div>
         <div class="pcard-specs">
-          ${m.specs.map(s => `<span class="pcard-spec">${s[0]}: ${s[1]}</span>`).join('')}
+          ${m.specs.map(s => `<span class="pcard-spec${s[2] ? ' pcard-spec-price' : ''}">${s[0]}: ${s[1]}</span>`).join('')}
         </div>
       </div>
       <a class="pcard-wa" href="${m.wa}" target="_blank" style="position:relative;z-index:2">

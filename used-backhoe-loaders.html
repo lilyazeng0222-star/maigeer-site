@@ -238,6 +238,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 .pcard-name{font-family:"Bebas Neue",sans-serif;font-size:22px;letter-spacing:.03em;color:var(--navy);line-height:1.1}
 .pcard-specs{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap}
 .pcard-spec{font-size:11px;font-weight:600;color:var(--muted);background:var(--light);padding:3px 8px;border-radius:4px}
+.pcard-spec-price{background:rgba(245,180,0,.18);color:var(--navy);font-weight:700}
 .pcard-wa{display:flex;align-items:center;justify-content:center;gap:6px;background:var(--green);color:#fff;font-family:"DM Sans",sans-serif;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:10px;margin:8px 14px 14px;border-radius:6px;transition:filter .2s}
 .pcard-wa:hover{filter:brightness(1.1)}
 .pcard-wa svg{width:14px;height:14px;fill:#fff;flex-shrink:0}
@@ -603,8 +604,6 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
     <div style="display:flex;flex-wrap:wrap;gap:14px">
       <a href="used-excavators.html" style="display:flex;align-items:center;gap:8px;padding:12px 20px;border:1px solid rgba(0,0,0,.12);border-radius:8px;color:var(--navy);text-decoration:none;font-weight:600;font-size:14px">Excavators for digging & lifting <span style="color:var(--gold)">→</span></a>
       <a href="used-wheel-loaders.html" style="display:flex;align-items:center;gap:8px;padding:12px 20px;border:1px solid rgba(0,0,0,.12);border-radius:8px;color:var(--navy);text-decoration:none;font-weight:600;font-size:14px">Wheel loaders for site prep <span style="color:var(--gold)">→</span></a>
-      <a href="used-truck-cranes.html" style="display:flex;align-items:center;gap:8px;padding:12px 20px;border:1px solid rgba(0,0,0,.12);border-radius:8px;color:var(--navy);text-decoration:none;font-weight:600;font-size:14px">Truck cranes for lifting <span style="color:var(--gold)">→</span></a>
-      <a href="used-trailer-heads.html" style="display:flex;align-items:center;gap:8px;padding:12px 20px;border:1px solid rgba(0,0,0,.12);border-radius:8px;color:var(--navy);text-decoration:none;font-weight:600;font-size:14px">Trailer heads for hauling <span style="color:var(--gold)">→</span></a>
     </div>
   </div>
 </section>
@@ -737,7 +736,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 
 <!-- PRODUCT DATA + RENDER -->
 <script>
-const BACKHOE_LOADERS = [{"id":"cat-420f","brand":"CAT","brandFull":"Caterpillar","name":"CAT 420F","img":"products/image/CAT_420F_(1)_card.webp","specs":[["Year","2026"],["Hours","160H"],["Weight","8 T"]],"detail":"products/cat-420f-detail.html","wa":"https://wa.me/8615382453746?text=Hi%2C+I'm+interested+in+CAT+420F+(ID%3A+MG-BL-420F-030).+Please+send+more+details."},{"id":"jcb-3cx","brand":"JCB","brandFull":"JCB","name":"JCB 3CX","img":"products/image/JCB_3CX_(1)_card.webp","specs":[["Year","2018"],["Hours","1760H"],["Weight","7.4 T"]],"detail":"products/jcb-3cx-detail.html","wa":"https://wa.me/8615382453746?text=Hi%2C+I'm+interested+in+JCB+3CX+(ID%3A+MG-BL-3CX-027).+Please+send+more+details."},{"id":"jcb-4cx","brand":"JCB","brandFull":"JCB","name":"JCB 4CX","img":"products/image/JCB_4CX_(1)_card.webp","specs":[["Year","2019"],["Hours","1890H"],["Weight","8.5 T"]],"detail":"products/jcb-4cx-detail.html","wa":"https://wa.me/8615382453746?text=Hi%2C+I'm+interested+in+JCB+4CX+(ID%3A+MG-BL-4CX-028).+Please+send+more+details."},{"id":"liugong-clg777a","brand":"LIUGONG","brandFull":"LiuGong","name":"LiuGong CLG777A","img":"products/image/LIUGONG_CLG777A_(1)_card.webp","specs":[["Year","2024"],["Hours","480H"],["Weight","8.4 T"]],"detail":"products/liugong-clg777a-detail.html","wa":"https://wa.me/8615382453746?text=Hi%2C+I'm+interested+in+LiuGong+CLG777A+(ID%3A+MG-BL-CLG777A-029).+Please+send+more+details."}];
+const BACKHOE_LOADERS = [{"id":"cat-420f","brand":"CAT","brandFull":"Caterpillar","name":"CAT 420F","img":"products/image/CAT_420F_(1)_card.webp","specs":[["Year","2026"],["Hours","160H"],["Weight","8 T"],["Price","$23,500+",true]],"detail":"products/cat-420f-detail.html","wa":"https://wa.me/8615382453746?text=Hi%2C+I'm+interested+in+CAT+420F+(ID%3A+MG-BL-420F-030).+Please+send+more+details."},{"id":"jcb-3cx","brand":"JCB","brandFull":"JCB","name":"JCB 3CX","img":"products/image/JCB_3CX_(1)_card.webp","specs":[["Year","2018"],["Hours","1760H"],["Weight","7.4 T"],["Price","$24,000+",true]],"detail":"products/jcb-3cx-detail.html","wa":"https://wa.me/8615382453746?text=Hi%2C+I'm+interested+in+JCB+3CX+(ID%3A+MG-BL-3CX-027).+Please+send+more+details."},{"id":"jcb-4cx","brand":"JCB","brandFull":"JCB","name":"JCB 4CX","img":"products/image/JCB_4CX_(1)_card.webp","specs":[["Year","2019"],["Hours","1890H"],["Weight","8.5 T"],["Price","$28,500+",true]],"detail":"products/jcb-4cx-detail.html","wa":"https://wa.me/8615382453746?text=Hi%2C+I'm+interested+in+JCB+4CX+(ID%3A+MG-BL-4CX-028).+Please+send+more+details."},{"id":"liugong-clg777a","brand":"LIUGONG","brandFull":"LiuGong","name":"LiuGong CLG777A","img":"products/image/LIUGONG_CLG777A_(1)_card.webp","specs":[["Year","2024"],["Hours","480H"],["Weight","8.4 T"],["Price","$23,400+",true]],"detail":"products/liugong-clg777a-detail.html","wa":"https://wa.me/8615382453746?text=Hi%2C+I'm+interested+in+LiuGong+CLG777A+(ID%3A+MG-BL-CLG777A-029).+Please+send+more+details."}];
 
 let activeBrand = "all";
 function filterBrand(brand, btn) {
@@ -769,7 +768,7 @@ function renderGrid() {
         <div class="pcard-brand">${m.brandFull.toUpperCase()}</div>
         <div class="pcard-name">${m.name}</div>
         <div class="pcard-specs">
-          ${m.specs.map(s => `<span class="pcard-spec">${s[0]}: ${s[1]}</span>`).join('')}
+          ${m.specs.map(s => `<span class="pcard-spec${s[2] ? ' pcard-spec-price' : ''}">${s[0]}: ${s[1]}</span>`).join('')}
         </div>
       </div>
       <a class="pcard-wa" href="${m.wa}" target="_blank" style="position:relative;z-index:2">

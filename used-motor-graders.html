@@ -253,6 +253,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 .pcard-name{font-family:"Bebas Neue",sans-serif;font-size:22px;letter-spacing:.03em;color:var(--navy);line-height:1.1}
 .pcard-specs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:6px}
 .pcard-spec{font-size:11px;font-weight:600;color:var(--muted);background:var(--light);padding:3px 8px;border-radius:4px}
+.pcard-spec-price{background:rgba(245,180,0,.18);color:var(--navy);font-weight:700}
 .pcard-wa{display:flex;align-items:center;justify-content:center;gap:6px;background:var(--green);color:#fff;font-family:"DM Sans",sans-serif;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:10px;margin:8px 14px 14px;border-radius:6px;transition:filter .2s}
 .pcard-wa:hover{filter:brightness(1.1)}
 .pcard-wa svg{width:14px;height:14px;fill:#fff;flex-shrink:0}
@@ -737,7 +738,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 
 <!-- PRODUCT DATA + RENDER -->
 <script>
-const MOTOR_GRADERS = [{"id":"cat-140h","brand":"CAT","brandFull":"Caterpillar","name":"CAT 140H","img":"products/image/CAT_140H_(1)_card.webp","specs":[["Year","2024"],["Hours","570H"],["Weight","15.5 T"]],"detail":"products/cat-140h-detail.html","wa":"https://wa.me/8615382453746?text=Hi%2C+I'm+interested+in+CAT+140H+(ID%3A+MG-GR-140H-017).+Please+send+more+details."},{"id":"cat-140k","brand":"CAT","brandFull":"Caterpillar","name":"CAT 140K","img":"products/image/CAT_140K_(1)_card.webp","specs":[["Year","2024"],["Hours","780H"],["Weight","15.5 T"]],"detail":"products/cat-140k-detail.html","wa":"https://wa.me/8615382453746?text=Hi%2C+I'm+interested+in+CAT+140K+(ID%3A+MG-GR-140K-018).+Please+send+more+details."},{"id":"xcmg-gr1803","brand":"XCMG","brandFull":"XCMG","name":"XCMG GR1803","img":"products/image/XCMG_GR1803_(1)_card.webp","specs":[["Year","2024"],["Hours","620H"],["Weight","15.4 T"]],"detail":"products/xcmg-gr1803-detail.html","wa":"https://wa.me/8615382453746?text=Hi%2C+I'm+interested+in+XCMG+GR1803+(ID%3A+MG-GR-GR1803-019).+Please+send+more+details."},{"id":"xcmg-gr2153","brand":"XCMG","brandFull":"XCMG","name":"XCMG GR2153","img":"products/image/XCMG_GR2153_(1)_card.webp","specs":[["Year","2024"],["Hours","590H"],["Weight","16.5 T"]],"detail":"products/xcmg-gr2153-detail.html","wa":"https://wa.me/8615382453746?text=Hi%2C+I'm+interested+in+XCMG+GR2153+(ID%3A+MG-GR-GR2153-020).+Please+send+more+details."}];
+const MOTOR_GRADERS = [{"id":"cat-140h","brand":"CAT","brandFull":"Caterpillar","name":"CAT 140H","img":"products/image/CAT_140H_(1)_card.webp","specs":[["Year","2024"],["Hours","570H"],["Weight","15.5 T"],["Price","$24,900+",true]],"detail":"products/cat-140h-detail.html","wa":"https://wa.me/8615382453746?text=Hi%2C+I'm+interested+in+CAT+140H+(ID%3A+MG-GR-140H-017).+Please+send+more+details."},{"id":"cat-140k","brand":"CAT","brandFull":"Caterpillar","name":"CAT 140K","img":"products/image/CAT_140K_(1)_card.webp","specs":[["Year","2024"],["Hours","780H"],["Weight","15.5 T"],["Price","$28,600+",true]],"detail":"products/cat-140k-detail.html","wa":"https://wa.me/8615382453746?text=Hi%2C+I'm+interested+in+CAT+140K+(ID%3A+MG-GR-140K-018).+Please+send+more+details."},{"id":"xcmg-gr1803","brand":"XCMG","brandFull":"XCMG","name":"XCMG GR1803","img":"products/image/XCMG_GR1803_(1)_card.webp","specs":[["Year","2024"],["Hours","620H"],["Weight","15.4 T"],["Price","$24,300+",true]],"detail":"products/xcmg-gr1803-detail.html","wa":"https://wa.me/8615382453746?text=Hi%2C+I'm+interested+in+XCMG+GR1803+(ID%3A+MG-GR-GR1803-019).+Please+send+more+details."},{"id":"xcmg-gr2153","brand":"XCMG","brandFull":"XCMG","name":"XCMG GR2153","img":"products/image/XCMG_GR2153_(1)_card.webp","specs":[["Year","2024"],["Hours","590H"],["Weight","16.5 T"],["Price","$26,700+",true]],"detail":"products/xcmg-gr2153-detail.html","wa":"https://wa.me/8615382453746?text=Hi%2C+I'm+interested+in+XCMG+GR2153+(ID%3A+MG-GR-GR2153-020).+Please+send+more+details."}];
 
 let activeBrand = "all";
 function filterBrand(brand, btn) {
@@ -769,7 +770,7 @@ function renderGrid() {
         <div class="pcard-brand">${m.brandFull.toUpperCase()}</div>
         <div class="pcard-name">${m.name}</div>
         <div class="pcard-specs">
-          ${m.specs.map(s => `<span class="pcard-spec">${s[0]}: ${s[1]}</span>`).join('')}
+          ${m.specs.map(s => `<span class="pcard-spec${s[2] ? ' pcard-spec-price' : ''}">${s[0]}: ${s[1]}</span>`).join('')}
         </div>
       </div>
       <a class="pcard-wa" href="${m.wa}" target="_blank" style="position:relative;z-index:2">
