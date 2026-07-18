@@ -1,6 +1,6 @@
 # ══════════════════════════════════════════
 # MAIGEER MACHINERY — robots.txt
-# Updated: 2026-06-22
+# Updated: 2026-07-19
 # ══════════════════════════════════════════
 
 # ── 允许正常搜索引擎 ──
@@ -72,13 +72,14 @@ Disallow: /
 User-agent: PetalBot
 Disallow: /
 
-# ── 屏蔽恶意/垃圾爬虫 ──
+# ── SEO工具类爬虫：允许（用于自查外链与关键词数据）──
 User-agent: AhrefsBot
-Disallow: /
+Allow: /
 
 User-agent: SemrushBot
-Disallow: /
+Allow: /
 
+# ── 屏蔽恶意/垃圾爬虫 ──
 User-agent: DotBot
 Disallow: /
 
