@@ -1659,6 +1659,56 @@
     <priority>0.5</priority>
   </url>
 
+  <!-- ── 俄语博客文章 (ru/blog/) ── -->
+  <url>
+    <loc>https://www.maigeermachinery.com/ru/blog/container-vs-roro-shipping.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.maigeermachinery.com/ru/blog/fob-vs-cif-shipping-terms.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.maigeermachinery.com/ru/blog/how-to-choose-used-excavator-china.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.maigeermachinery.com/ru/blog/how-to-choose-used-road-roller-china.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.maigeermachinery.com/ru/blog/how-to-choose-used-wheel-loader-china.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.maigeermachinery.com/ru/blog/how-we-inspect-every-machine.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.maigeermachinery.com/ru/blog/sdlg-956f-export-libya.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.maigeermachinery.com/ru/blog/why-buy-used-machinery-from-china.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
 <!-- ── 机械分类列表页 ── -->
   <url>
     <loc>https://www.maigeermachinery.com/used-machinery.html</loc>
