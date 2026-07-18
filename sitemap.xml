@@ -2217,4 +2217,26 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- ── 葡萄牙语试点页面 (pt/) -- 仅这3个试点页，未整批加入 ── -->
+  <url>
+    <loc>https://www.maigeermachinery.com/pt/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.maigeermachinery.com/pt/used-excavators.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.maigeermachinery.com/pt/used-cat-excavators.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
