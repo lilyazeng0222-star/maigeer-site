@@ -346,7 +346,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
 .cat-card-img{aspect-ratio:16/10;background:var(--light);position:relative;overflow:hidden}
 .cat-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .45s}
 .cat-card:hover .cat-card-img img{transform:scale(1.06)}
-.cat-card-badge{position:absolute;top:10px;right:10px;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:20px;background:#fff;color:var(--muted);box-shadow:0 2px 8px rgba(6,26,47,.12)}
+.cat-card-badge{white-space:nowrap;position:absolute;top:10px;right:10px;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:20px;background:#fff;color:var(--muted);box-shadow:0 2px 8px rgba(6,26,47,.12)}
 .cat-card-badge--stock{background:rgba(34,197,94,.92);color:#fff}
 .cat-card-badge--source{background:rgba(245,180,0,.95);color:var(--navy)}
 .cat-card-body{padding:20px 24px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
@@ -792,7 +792,7 @@ h1,h2,h3,.logo-name,.btn{font-family:"Bebas Neue",sans-serif}
         <div class="cat-card-body">
           <h3>Самосвалы Б/У</h3>
           <p>Сообщите нужную грузоподъёмность и место назначения — мы проверим наличие.</p>
-          <span class="cat-card-link">Спросить Нашу Команду →</span>
+          <span class="cat-card-link">Спросить Лилию →</span>
         </div>
       </a>
     </div>
@@ -1051,7 +1051,7 @@ const PRODS=[
 function renderP(f){
   const g=document.getElementById("pg");
   const list=f==="all"?PRODS:PRODS.filter(p=>p.cat===f);
-  g.innerHTML=list.map(p=>`<div class="pc" style="position:relative;cursor:pointer"><a class="pc-main" href="${p.detail}" aria-label="${p.name} details" style="position:absolute;inset:0;z-index:1"></a><div class="pc-img">${p.img?`<img src="${p.img}" alt="${p.name}" onerror="this.parentElement.innerHTML='<div class=pc-ph>📸 Add photo</div>'">`:`<div class="pc-ph">📸 Add machine photo</div>`}${p.badge?`<div class="pc-badge">${p.badge}</div>`:""}</div><div class="pc-body"><div class="pc-brand">${p.brand}</div><div class="pc-name">${p.name}</div><div class="pc-desc">${p.desc}</div><div class="pc-foot"><a href="${p.wa}" target="_blank" class="pc-inq" style="position:relative;z-index:2">Узнать Цену →</a></div></div></div>`).join("");
+  g.innerHTML=list.map(p=>`<div class="pc" style="position:relative;cursor:pointer"><a class="pc-main" href="${p.detail}" aria-label="${p.name} details" style="position:absolute;inset:0;z-index:1"></a><div class="pc-img">${p.img?`<img src="${p.img}" alt="${p.name}" onerror="this.parentElement.innerHTML='<div class=pc-ph>📸 Добавить фото</div>'">`:`<div class="pc-ph">📸 Добавить фото техники</div>`}${p.badge?`<div class="pc-badge">${p.badge}</div>`:""}</div><div class="pc-body"><div class="pc-brand">${p.brand}</div><div class="pc-name">${p.name}</div><div class="pc-desc">${p.desc}</div><div class="pc-foot"><a href="${p.wa}" target="_blank" class="pc-inq" style="position:relative;z-index:2">Узнать Цену →</a></div></div></div>`).join("");
 }
 function filterP(cat,btn){document.querySelectorAll(".pf-btn").forEach(b=>b.classList.remove("on"));btn.classList.add("on");renderP(cat);}
 renderP("all");
